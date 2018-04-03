@@ -1,0 +1,8 @@
+{:rover {:station "dsn://reconnaissance"
+         :store "ssd://mission-keeper"
+         :cameras {1 "mast-cam"
+                   2 "chem-cam"
+                   3 "nav-cam"
+                   4 "haz-cam"}}
+ :jpl {:station "dsn://goldstone"
+       :server "/jpl/mission/report/"}}
