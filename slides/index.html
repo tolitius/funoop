@@ -177,6 +177,18 @@
         background-image: url("img/first-slide-background.png");
         background-size: cover;
       }
+      .vs-slide-1 {
+        background-image: url("img/vs.png");
+        background-size: cover;
+      }
+      .vs-slide-2 {
+        background-image: url("img/vs-container.png");
+        background-size: cover;
+      }
+      .vs-common {
+        color: white;
+        margin: 0px 0px 0px 245px;
+      }
     </style>
   </head>
   <body>
@@ -189,12 +201,65 @@ class: first-slide
 #Clojure Bits on JVM
 ###by [@tolitius](https://twitter.com/tolitius)
 ---
-##[white board]
-FP                  OOP
-
-       sit on
-
-state management, configuration, databases, AOP, messaging, portability, etc.
+class: vs-slide-1
+layout: false
+---
+class: vs-slide-2
+layout: false
+---
+class: vs-slide-2
+.vs-common[
+##state management
+]
+---
+class: vs-slide-2
+layout: false
+.vs-common[
+##state management
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configuration
+]
+---
+class: vs-slide-2
+layout: false
+.vs-common[
+##state management
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configuration
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data stores
+]
+---
+class: vs-slide-2
+layout: false
+.vs-common[
+##state management
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configuration
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data stores
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;messaging
+]
+---
+class: vs-slide-2
+layout: false
+.vs-common[
+##state management
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configuration
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data stores
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;messaging
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AOP
+]
+---
+class: vs-slide-2
+layout: false
+.vs-common[
+##state management
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configuration
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data stores
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;messaging
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AOP
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portability
+]
+---
+name: inverse
+layout: true
+class: center, middle, inverse
 ---
 # designing with [nouns]()
 ---
@@ -292,6 +357,7 @@ Java/OOP + Spring..........                           [makes sense ✔]
 design approach............                           [solid ✔]
 ```
 ]]
+
 ---
 .left-column[
   ## What is it?
