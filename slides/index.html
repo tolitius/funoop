@@ -152,6 +152,31 @@
 
       .oop-way {
         color: #383131;
+        margin-left: -28px;
+      }
+
+      .oop-way p {
+        font-style: normal;
+      }
+
+      .oop-focus {
+        margin-left: 141px;
+      }
+
+      .oop-solid p {
+        background-color: #272822;
+        padding: 11px;
+        margin: 80px 0px 0px -169px;
+        color: #ddd;
+        border-radius: 10px;
+        font-size: 1.8em;
+        font-family: 'Ubuntu Mono';
+        text-align: center;
+        width: 123%;
+      }
+
+      .oop-solid .check {
+        color: #0ac805;
       }
 
       /* Slide-specific styling */
@@ -454,28 +479,47 @@ layout: false
 class: middle
 .left-column[
   ## [OOP]() design
+  ### .oop-focus[.rcc[focus on .rcch[nouns]]]
 ]
 .right-column[
 .bq[
 .oop-way[
-\- at least one class for JPL
+* at least one class for <b>JPL</b>
 
-\- at least one class for the rover itself
+* at least one class for the <b>rover</b> itself
 
-\- library for Deep Space Network (a prototype class)
+* library for <b>Deep Space Network</b> (a prototype class)
 
-\- at least one class for Command Center
+* at least one class for <b>Command Center</b>
 
-\- at least one class for Navigator
+* at least one class for <b>Navigator</b>
 
-\- at least one class for each instrument
+* at least one class for each <b>instrument</b>
+]]]
+---
+layout: false
+class: middle
+.left-column[
+  ## [OOP]() design
+  ### .oop-focus[.rcc[focus on .rcch[nouns]]]
+]
+.right-column[
+.bq[
+.oop-way[
+* at least one class for <b>JPL</b>
+
+* at least one class for the <b>rover</b> itself
+
+* library for <b>Deep Space Network</b> (a prototype class)
+
+* at least one class for <b>Command Center</b>
+
+* at least one class for <b>Navigator</b>
+
+* at least one class for each <b>instrument</b>
 ]]
-.rcc[
-## design is based on .rcch[components talking] to each other
-```
-Java/OOP + Spring..........                           [makes sense ✔]
-design approach............                           [solid ✔]
-```
+.oop-solid[
+design approach............                           [solid .check[✔]]
 ]]
 
 
