@@ -123,6 +123,33 @@
         color: black;
       }
 
+      .curiosity {
+        width: 114%;
+        border-radius: 25px;
+        overflow: hidden;
+      }
+
+      .dsn {
+        width: 92.5%;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+
+      .jpl {
+        color: #f8f8f8cc;
+      }
+
+      .jhl {
+        color: white;
+      }
+
+      .jleft {
+        font-family: "Ubuntu Mono";
+        font-size: 1.07em;
+        margin-left: 10px;
+        width: 100%;
+      }
+
       /* Slide-specific styling */
       #slide-inverse .footnote {
         bottom: 12px;
@@ -357,6 +384,85 @@ Java/OOP + Spring..........                           [makes sense ✔]
 design approach............                           [solid ✔]
 ```
 ]]
+---
+class: inverse, middle, center
+# ... it is not the [only way]()
+---
+class: inverse, middle, center
+# data [|]() data [|]() data
+---
+class: inverse, middle, center
+# data [|]() data [|]() data
+## focus on .lhl[data] and its .lhl[transformation]
+---
+class: inverse, middle
+.pull-right[
+<img class="curiosity" src="img/curiosuty.png">
+]
+.pull-left[
+.right[
+## Hi! I am .lhl[Curiosity]
+]
+]
+---
+class: inverse, middle, jpl
+.pull-right[
+<img class="curiosity" src="img/curiosuty.png">
+]
+.pull-left[
+.right[
+## Hi! I am .lhl[Curiosity]
+### [J]()et [P]()ropulsion [L]()aboratory at NASA
+.jleft[
+.left[
+* move .jhl[forward 42] meters
+* turn .jhl[28 degrees] to the .jhl[left]
+* travel .jhl[forward 34] more meters
+]]]]
+---
+class: inverse, middle, jpl
+.pull-right[
+<img class="curiosity" src="img/curiosuty.png">
+]
+.pull-left[
+.right[
+## Hi! I am .lhl[Curiosity]
+### [J]()et [P]()ropulsion [L]()aboratory at NASA
+.jleft[
+.left[
+* move .jhl[forward 42] meters
+* turn .jhl[28 degrees] to the .jhl[left]
+* travel .jhl[forward 34] more meters
+]]
+.center[
+### [D]()eep [S]()pace [N]()etwork
+<img class="dsn" src="img/deep-space-network.png">
+]]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 .left-column[
@@ -668,10 +774,9 @@ template: inverse
 
 Slideshow created using [remark](http://github.com/gnab/remark).
     </textarea>
-    <script src="js/remark-latest.min.js">
-    </script>
+    <script src="js/remark-latest.min.js"></script>
     <script>
-      var slideshow = remark.create();
+      var hljs = remark.highlighter.engine;
     </script>
     <script src="js/remark.language.js"></script>
     <script>
@@ -681,9 +786,6 @@ Slideshow created using [remark](http://github.com/gnab/remark).
           highlightLines: true
         }) ;
     </script>
-    <!-- <script> -->
-    <!--   var slideshow = remark.create({ highlightLanguage: 'clojure'}); -->
-    <!-- </script> -->
   </body>
 </html>
 
