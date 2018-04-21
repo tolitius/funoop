@@ -150,6 +150,10 @@
         width: 100%;
       }
 
+      .oop-way {
+        color: #383131;
+      }
+
       /* Slide-specific styling */
       #slide-inverse .footnote {
         bottom: 12px;
@@ -438,6 +442,41 @@ class: inverse, middle, jpl
 ### [D]()eep [S]()pace [N]()etwork
 <img class="dsn" src="img/deep-space-network.png">
 ]]]
+---
+class: inverse, middle, center
+#[whiteboard]
+```
+                                                                                <===>     Instruments (MastCam, navcams, hazcams, etc..)
+Earth (JPL) || <===> Deep Space Network <===> || Curiosity <===> Command Center <===> Navigator
+```
+---
+layout: false
+class: middle
+.left-column[
+  ## [OOP]() design
+]
+.right-column[
+.bq[
+.oop-way[
+\- at least one class for JPL
+
+\- at least one class for the rover itself
+
+\- library for Deep Space Network (a prototype class)
+
+\- at least one class for Command Center
+
+\- at least one class for Navigator
+
+\- at least one class for each instrument
+]]
+.rcc[
+## design is based on .rcch[components talking] to each other
+```
+Java/OOP + Spring..........                           [makes sense ✔]
+design approach............                           [solid ✔]
+```
+]]
 
 
 
