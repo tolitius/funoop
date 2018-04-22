@@ -166,7 +166,7 @@
       .oop-solid p {
         background-color: #272822;
         padding: 11px;
-        margin: 80px 0px 0px -169px;
+        margin: 40px 0px 0px -169px;
         color: #ddd;
         border-radius: 10px;
         font-size: 1.8em;
@@ -177,6 +177,108 @@
 
       .oop-solid .check {
         color: #0ac805;
+      }
+
+      .gr {
+        color: #ffffff80;
+      }
+
+      .grf {
+        color: #fff3;
+      }
+
+      .ccol {
+        color: #ecdbd8
+      }
+
+      .fop-way {
+        color: #ffffff80;
+        margin-left: -33px;
+      }
+
+      .fop-way p {
+        font-style: normal;
+        line-height: 11px;
+        font-size: 0.99em;
+      }
+
+      .fop-way-seqs {
+        margin: 45px 0px 0px 10px;
+        font-size: 0.928em;
+        padding: 0px 20px;
+        border: 1px solid #f9267299;
+        border-radius: 10px;
+        width: 92%;
+        text-align: left;
+        background-color: #f926721a;
+        color: #ffffff80;
+      }
+
+      .fop-way-seqs h3 {
+        margin-top: 0px;
+      }
+
+      .fwh {
+        color: #f0b1b1;
+      }
+
+      .shell {
+        background-color: black;
+        padding: 0px;
+        margin: 40px 0px 0px 60px;
+        color: #ddd;
+        border-radius: 10px;
+        font-size: 1.6em;
+        font-family: 'Ubuntu Mono';
+        text-align: center;
+        width: 84%;
+      }
+
+      .shell p {
+        padding: 10px;
+      }
+
+      .time-graph h2 {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .immutability {
+        margin: 0px 0px 0px 201px;
+        font-size: 1.2em;
+        padding: 30px;
+        border: 1px solid #f9267299;
+        border-radius: 10px;
+        width: 37%;
+        text-align: left;
+        background-color: #f926724d;
+        color: #ffffff80;
+      }
+
+      .demo code {
+        margin: 0px;
+        font-size: 3.2em;
+        padding: 14px;
+        border: 2px solid #f9262633;
+        border-radius: 10px;
+        width: 37%;
+        text-align: left;
+        background-color: #ffa4a466;
+        color: #ffffffe6;
+        font-family: Yanone Kaffeesatz;
+      }
+
+      .demo-link a {
+        color: rgba(249, 38, 114, 0.57);
+      }
+
+      .immutability h1 {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .h1-center {
+        text-align: center;
       }
 
       /* Slide-specific styling */
@@ -239,6 +341,10 @@
       }
       .vs-slide-2 {
         background-image: url("img/vs-container.png");
+        background-size: cover;
+      }
+      .impic {
+        background-image: url("img/immutability.png");
         background-size: cover;
       }
       .vs-common {
@@ -468,15 +574,12 @@ class: inverse, middle, jpl
 <img class="dsn" src="img/deep-space-network.png">
 ]]]
 ---
-class: inverse, middle, center
-#[whiteboard]
+layout: false
+class: middle
 ```
                                                                                 <===>     Instruments (MastCam, navcams, hazcams, etc..)
 Earth (JPL) || <===> Deep Space Network <===> || Curiosity <===> Command Center <===> Navigator
 ```
----
-layout: false
-class: middle
 .left-column[
   ## [OOP]() design
   ### .oop-focus[.rcc[focus on .rcch[nouns]]]
@@ -499,6 +602,10 @@ class: middle
 ---
 layout: false
 class: middle
+```
+                                                                                <===>     Instruments (MastCam, navcams, hazcams, etc..)
+Earth (JPL) || <===> Deep Space Network <===> || Curiosity <===> Command Center <===> Navigator
+```
 .left-column[
   ## [OOP]() design
   ### .oop-focus[.rcc[focus on .rcch[nouns]]]
@@ -521,13 +628,98 @@ class: middle
 .oop-solid[
 design approach............                           [solid .check[✔]]
 ]]
+---
+class: inverse, middle, center
+```
+                                                                                <===>     Instruments (MastCam, navcams, hazcams, etc..)
+Earth (JPL) || <===> Deep Space Network <===> || Curiosity <===> Command Center <===> Navigator
+```
+## focus on .lhl[data] and its .lhl[transformations]
+.fop-way-seqs[
+navigation commands are sent to the Deep Space Network
 
+navigation commands are passed to the command center
 
+navigation commands are split and sent in sequence to navigator
 
+low level engine commands are sent to move the rover
 
+(once rover arrives to the destination) capture commands are sent to cameras
 
+image events are sent back to the Deep Space Network
 
+image events are stored at JPL
+]
+---
+class: inverse, middle, center
+```
+                                                                                <===>     Instruments (MastCam, navcams, hazcams, etc..)
+Earth (JPL) || <===> Deep Space Network <===> || Curiosity <===> Command Center <===> Navigator
+```
+## focus on .lhl[data] and its .lhl[transformations]
+.fop-way-seqs[
+.grf[
+.fwh[navigation commands] are .fwh[sent] to the Deep Space Network
 
+.fwh[navigation commands] are .fwh[passed] to the command center
+
+.fwh[navigation commands] are .fwh[split] and .fwh[sent] in sequence to navigator
+
+low level .fwh[engine commands] are .fwh[sent] to move the rover
+
+(once rover arrives to the destination) .fwh[capture commands] are .fwh[sent] to cameras
+
+.fwh[image events] are .fwh[sent] back to the Deep Space Network
+
+.fwh[image events] are .fwh[stored] at JPL
+]]
+---
+class: inverse, middle, center, ccol
+## commands [&gt;]() send [&gt;]() navigate [&gt;]() capture [&gt;]() send back
+---
+class: inverse, middle, center, ccol
+## commands [|]() send [|]() navigate [|]() capture [|]() send back
+
+---
+class: inverse, middle, center, ccol
+## commands [|]() send [|]() navigate [|]() capture [|]() send back
+
+.shell[
+$ .lhl[cut] -f 2 report | .lhl[sort] -o | .lhl[uniq] -c
+]
+---
+class: inverse, middle, center, ccol
+## commands [|]() send [|]() navigate [|]() capture [|]() send back
+
+.shell[
+$ .lhl[cut] -f 2 report | .lhl[sort] -o | .lhl[uniq] -c
+]
+
+## v1 [&gt;]() v2 [&gt;]() v3 [&gt;]() v4 [&gt;]() ... [&gt;]() v42
+---
+class: inverse, middle, center, ccol
+## commands [|]() send [|]() navigate [|]() capture [|]() send back
+
+.shell[
+$ .lhl[cut] -f 2 report | .lhl[sort] -o | .lhl[uniq] -c
+]
+
+## v1 [&gt;]() v2 [&gt;]() v3 [&gt;]() v4 [&gt;]() ... [&gt;]() v42
+.time-graph[
+## --------------------------------&gt;
+## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time
+]
+---
+class: inverse, middle, center, impic
+.immutability[
+# immutability
+]
+---
+class: inverse, middle, center
+.demo[
+`&lt;demo/&gt;`
+]
+.demo-link[### [github.com/tolitius/funoop/tree/master/curiosity](https://github.com/tolitius/funoop/tree/master/curiosity)]
 
 
 
