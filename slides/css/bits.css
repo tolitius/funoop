@@ -454,6 +454,8 @@ code {
     background-color: #e0e0e0;
     background-image: url("../img/mission.png");
     background-size: 908px;
+    background-repeat: no-repeat;
+    background-position: right 71px;
 }
 
 .fff h2 {
