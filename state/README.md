@@ -43,7 +43,7 @@ starting the app:
 
 state is still an atom, but it now has connection objects ready to be used:
 
-```
+```clojure
 => (type state.atom/app-state)
 clojure.lang.Atom
 
@@ -54,21 +54,21 @@ clojure.lang.Atom
 
 these objects are keys in a app-state map:
 
-```
+```clojure
 => (@state.atom/app-state :db)
 {:db-connection :object}
 ```
 
 an example of a stateless function that uses this state:
 
-```
+```clojure
 => (defn find-life [{:keys [db]} query]
      (println "looking for life inside" db ">" query))
 
 #'/find-life
 ```
 
-```
+```clojure
 => (find-life @state.atom/app-state "select water from mars;")
 looking for life inside {:db-connection :object} > select water from mars;
 ```
