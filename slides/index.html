@@ -222,6 +222,14 @@
         color: #f0b1b1;
       }
 
+      .same-needs {
+        color: #fee1e1cc;
+      }
+
+      .same-needs .lang {
+        margin-left: -40px;
+      }
+
       .shell {
         background-color: black;
         padding: 0px;
@@ -718,10 +726,99 @@ class: inverse, middle, center
 `&lt;demo/&gt;`
 ]
 .demo-link[### [github.com/tolitius/funoop/tree/master/curiosity](https://github.com/tolitius/funoop/tree/master/curiosity)]
+---
+class: inverse, middle, center
+# "bits are bits"
+### regradless of [FP]() or [OOP]()
 
+---
+class: inverse, middle, center
+# business is [orthogonal]()
+### to [FP]() or [OOP]()
 
+---
+class: inverse, middle, center
+# many "[needs]()" stay the [same]()
+---
+class: inverse, middle, center
+# [mutable]() application resources
+.right-column[
+.lleft[
+.same-needs[
+### - network connections
+### - files
+### - databases
+### - thread pools workers
+### - etc.]]]
 
+---
+class: inverse, middle, center
+# external [configuration]()
+.right-column[
+.lleft[
+.same-needs[
+### - ENV variables
+### - property files
+### - Zookeeper
+### - Consul
+### - etc.]]]
 
+---
+class: inverse, middle, center
+# [cross]() cutting concerns
+.right-column[
+.lleft[
+.same-needs[
+### - logging
+### - exception handling
+### - transaction management
+### - security
+### - profiling
+### - etc.]]]
+
+---
+class: inverse, middle, center
+# communication with [data stores]()
+.right-column[
+.lleft[
+.same-needs[
+### - SQL
+### - or not
+]]]
+
+---
+class: inverse, middle, center
+# sending / receiving [events]()
+.right-column[
+.lleft[
+.same-needs[
+### - message brokers
+### - HTTP endpoints (REST or not)
+### - zeromq
+### - etc.
+]]]
+
+---
+class: inverse, middle, center
+# communication [across languages]()
+.right-column[
+.lleft[
+.same-needs[
+.lang[
+###  Java <=> C++ <=> Go <=> Rust <=> ...
+]]]]
+
+---
+class: inverse, middle, center
+# non blocking communication
+.right-column[
+.lleft[
+.same-needs[
+### - OS/VM threads
+### - CSP (Go routines, green threads)
+### - non blocking I/O
+### - etc.
+]]]
 
 
 
