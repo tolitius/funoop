@@ -577,8 +577,83 @@ class: inverse, middle, center
 ### main building block
 .why-libs[
 ## apps depend on .jhl[libraries] these .jhl[functions call] out to
+]]
+---
+class: middle, center
+# great in theory, [but]() what about..
+.what-about[
+### database connections
+### threadpools
+### caches
+### etc.
 ]
+---
+class: middle, center
+# state needs to live [somewhere]()
+## regrdless of FP or OOP
+---
+class: inverse, middle, center
+# true[.]()
+---
+class: inverse, middle, center, clojure-dark
+.fff[
+## .current[state] > configuration > data stores > messaging > AOP > portability
 ]
+
+# atoms
+---
+class: inverse, middle, center, clojure-dark
+.fff[
+## .current[state] > configuration > data stores > messaging > AOP > portability
+]
+
+# atoms
+.wt-text[
+
+think AtomicLong, AtomicInteger
+
+but instead ".mcode[AtomicWhateverTypeYouNeed]"
+]
+---
+class: inverse, middle, center, clojure-dark
+.fff[
+## .current[state] > configuration > data stores > messaging > AOP > portability
+]
+
+# atoms
+.wt-text[
+
+think AtomicLong, AtomicInteger
+
+but instead ".mcode[AtomicWhateverTypeYouNeed]"
+<br/><br/>
+.es1[
+.cblock[
+```clojure
+(def app-state (atom {}))
+```
+]
+.cblock[
+```clojure
+(defn start [conf]
+  (reset! app-state {:db (db-connect conf)
+                     :cache (cache-connect conf)}))
+```
+]]]
+---
+class: inverse, middle, center, clojure-dark
+.fff[
+## .current[state] > configuration > data stores > messaging > AOP > portability
+
+
+.demo[
+`&lt;demo/&gt;`
+]
+
+.demo-link[
+### [github.com/tolitius/funoop/tree/master/state](https://github.com/tolitius/funoop/tree/master/state)
+]]
+
     </textarea>
     <script src="js/remark-latest.min.js"></script>
     <script>

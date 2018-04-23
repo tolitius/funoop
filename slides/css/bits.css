@@ -350,6 +350,18 @@ code {
     color: #83847d;
 }
 
+.what-about {
+    text-align: left;
+    margin-left: 200px;
+    line-height: 12px;
+}
+
+.needs-to-live {
+    padding: 10px;
+    border-radius: 10px;
+    background: gray;
+}
+
 .mleft-column {
     color: #777;
     width: 5%;
@@ -443,8 +455,61 @@ code {
     background-image: url("../img/mission.png");
     background-size: 908px;
 }
+
+.fff h2 {
+    margin: -287px 0px 0px -60px;
+    color: #80808080;
+    font-size: 1.8em;
+}
+
+.current {
+    color: white;
+}
+.wt-text {
+    font-family: 'Ubuntu Mono';
+    font-size: 1.2em;
+}
+
+.mcode {
+    background: #e7e8e24d;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    color: #fffc;
+}
+
+.cblock {
+    text-align: left;
+    margin-left: 57px;
+}
+
+.cblock .remark-code {
+    font-size: 24px;
+}
+
+.fff .demo {
+    margin: 215px 0px -200px 0px;
+}
+
+.fff .demo-link {
+    margin: 213px 0px -200px 0px;
+}
+
+.es1 {
+    margin-bottom: -200px
+}
+
+.es1 .remark-code {
+    background: #8080804d;
+    border-radius: 16px;
+}
+
 .impic {
     background-image: url("../img/immutability.png");
+    background-size: cover;
+}
+.clojure-dark {
+    background-image: url("../img/clojure-dark.png");
     background-size: cover;
 }
 .vs-common {
