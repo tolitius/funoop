@@ -117,66 +117,6 @@ class: center, middle, inverse
 ### message passing done via .lhl[method calls]
 ]]]
 ---
-layout: false
-class: middle
-.left-column[
-  ## [spring]() docs
-]
-.right-column[
-.bq[<span>IoC is also known as dependency injection</span>
-<span>(DI) is a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
-<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
-]
----
-layout: false
-class: middle
-.left-column[
-  ## [spring]() docs
-]
-.right-column[
-.bq[<span>IoC is also known as dependency injection</span>
-<span>(DI) is a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
-<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
-
-.rcc[
-## design is based on .rcch[components talking] to each other
-]]
----
-layout: false
-class: middle
-.left-column[
-  ## [spring]() docs
-]
-.right-column[
-.bq[<span>IoC is also known as dependency injection</span>
-<span>(DI) is a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
-<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
-
-.rcc[
-## design is based on .rcch[components talking] to each other
-```
-Java/OOP + Spring..........                           [makes sense ✔]
-```
-]]
----
-layout: false
-class: middle
-.left-column[
-  ## [spring]() docs
-]
-.right-column[
-.bq[<span>IoC is also known as dependency injection</span>
-<span>(DI) is a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
-<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
-
-.rcc[
-## design is based on .rcch[components talking] to each other
-```
-Java/OOP + Spring..........                           [makes sense ✔]
-design approach............                           [solid ✔]
-```
-]]
----
 class: inverse, middle, center
 # ... it is not the [only way]()
 ---
@@ -483,6 +423,162 @@ class: inverse, middle, center
 ### - etc.
 ]]]
 
+---
+class: middle, center
+.ctm[
+<img src="img/clojure-logo.png" width="20%">
+]
+# [state]() management
+---
+layout: false
+class: middle
+.left-column[
+  ## [spring]() docs
+]
+.right-column[
+.bq[<span>IoC is also known as dependency injection</span>
+<span>(DI) is a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
+<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
+]
+---
+layout: false
+class: middle
+.left-column[
+  ## [spring]() docs
+]
+.right-column[
+.bq[<span>IoC is also known as dependency injection</span>
+<span>(DI) is a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
+<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
+
+.rcc[
+## design is based on .rcch[components talking] to each other
+]]
+---
+layout: false
+class: middle
+.left-column[
+  ## [spring]() docs
+]
+.right-column[
+.bq[<span>IoC is also known as dependency injection</span>
+<span>(DI) is a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
+<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
+
+.rcc[
+## design is based on .rcch[components talking] to each other
+```
+Java/OOP + Spring..........                           [makes sense ✔]
+```
+]]
+---
+layout: false
+class: middle
+.left-column[
+  ## [spring]() docs
+]
+.right-column[
+.bq[<span>IoC is also known as dependency injection</span>
+<span>(DI) is a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
+<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
+
+.rcc[
+## design is based on .rcch[components talking] to each other
+```
+Java/OOP + Spring..........                           [makes sense ✔]
+design approach............                           [solid ✔]
+```
+]]
+---
+class: inverse, middle, center
+# library [vs.]() framework
+---
+class: inverse, middle, center
+# library [vs.]() framework
+.lvf[
+## [you]() call library
+## [framework]() calls you
+]
+---
+layout: false
+class: middle
+.left-column[
+.mtop-minus-130[
+  ## spring [framework]()
+]]
+.right-column[
+.mtop-minus-130[
+.bq[<span>IoC is also known as dependency injection</span>
+<span>(DI) is a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
+<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
+
+.rcc[
+## design is based on .rcch[components talking] to each other]
+.oop-solid[
+Java + Spring......... [makes sense .check[✔]]
+]]]
+---
+class: inverse, middle, center
+.cfa[
+<img src="img/clojure-logo.png" width="10%">
+]
+.cfal[
+## dependencies are [function arguments]()
+## function is [stateless]() and decoupled from state
+## REPL driven development
+]
+---
+class: inverse, middle, center
+.cfa[
+<img src="img/clojure-logo.png" width="10%">
+]
+.cfal[
+## dependencies are [function arguments]()
+## function is [stateless]() and decoupled from state
+## REPL driven development
+
+.crepl[
+.clj[
+```clojure
+repl=> (send-message kafka message)
+```
+]]]
+---
+class: inverse, middle, center
+.cfa[
+<img src="img/clojure-logo.png" width="10%">
+]
+.cfal[
+## dependencies are [function arguments]()
+## function is [stateless]() and decoupled from state
+## REPL driven development
+
+.crepl[
+.clj[
+```clojure
+repl=> (send-message kafka message)
+```
+.meta[
+###  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ^ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^</br>
+### &nbsp;&nbsp;&nbsp;function &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; state &nbsp;&nbsp;&nbsp;&nbsp; other arguments
+]]]]
+---
+class: inverse, middle, center
+.cfa[
+<img src="img/clojure-logo.png" width="10%">
+# [stateless]() function
+### main building block
+]
+---
+class: inverse, middle, center
+.cfa[
+<img src="img/clojure-logo.png" width="10%">
+# [stateless]() function
+### main building block
+.why-libs[
+## apps depend on .jhl[libraries] these .jhl[functions call] out to
+]
+]
     </textarea>
     <script src="js/remark-latest.min.js"></script>
     <script>

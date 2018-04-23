@@ -300,6 +300,56 @@ code {
     margin-top: -46px;
 }
 
+.mtop-minus-130 {
+    margin-top: -130px;
+}
+
+.cfa {
+    margin-top: -100px;
+}
+
+.cfal {
+    margin-left: 99px;
+    text-align: left;
+    width: 600px;
+}
+
+.crepl{
+    width: 75%;
+    margin-left: 48px;
+}
+
+.meta {
+    margin: -51px 0px -16px 120px;
+    width: 700px;
+}
+
+.meta h3 {
+    margin: 0px;
+    padding 0px;
+}
+
+.clj pre code div {
+    background: black;
+    padding: 10px;
+    border-radius: 9px;
+    font-size: 1.3em;
+}
+
+.why-libs {
+    margin: 32px 0px -74px 67px;
+    font-size: 0.9em;
+    padding: 0px 15px 29px 17px;
+    border: 1px solid #f5f5f533;
+    border-radius: 10px;
+    width: 76%;
+    background-color: #5d565966;
+}
+
+.why-libs h2 {
+    color: #83847d;
+}
+
 .mleft-column {
     color: #777;
     width: 5%;
@@ -315,6 +365,15 @@ code {
 
 .fp-focus h3 {
     margin: 0px 0px -7px 0px;
+}
+
+.ctm {
+    margin: -84px 0px -50px 400px;
+}
+
+.lvf {
+    text-align: left;
+    margin-left: 309px;
 }
 
 /* Slide-specific styling */
