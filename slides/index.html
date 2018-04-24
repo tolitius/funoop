@@ -722,7 +722,74 @@ class: inverse, middle, center, clojure-dark
 ### - security
 ### - profiling
 ### - etc.]]]
+---
+class: inverse, middle, center, clojure-dark
 
+.fff[
+## state > configuration > .current[AOP] > data stores > messaging > portability]
+
+.aop-examples[
+# [two]()fold
+]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > .current[AOP] > data stores > messaging > portability]
+
+.aop-examples[
+# [two]()fold
+.same-needs[
+### function composition
+
+.es3[
+.cblock[
+```clojure
+(defn web-app [routes]
+  (-> routes
+      wrap-cookies
+      wrap-params
+      wrap-exception-handling))
+```
+]]]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > .current[AOP] > data stores > messaging > portability]
+
+.aop-examples[
+# [two]()fold
+.same-needs[
+### rebind functions at runtime
+.es3[
+.es4[
+.cblock[
+```clojure
+(defn process [event] ...)
+
+(alter-var-root process (fn [f]
+                            #(do (println "profiling..")
+                                 (f %))))
+```
+]]]]]
+---
+class: inverse, middle, center, clojure-dark
+.fff[
+## state > configuration > .current[AOP] > data stores > messaging > portability
+
+
+.demo[
+`&lt;demo/&gt;`
+]
+
+.demo-link[
+### [github.com/tolitius/funoop/tree/master/yaweb](github.com/tolitius/funoop/tree/master/yaweb)
+]
+.demo-link[
+### [github.com/tolitius/calip](https://github.com/tolitius/calip)
+]
+]
 ---
 class: inverse, middle, center
 # communication with [data stores]()

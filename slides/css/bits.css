@@ -519,6 +519,10 @@ code {
     margin: 40px 0px 0px 275px;
 }
 
+.aop-examples {
+    margin: 107px 0px -285px 0px;
+}
+
 .litmus {
     width: 60%;
     float: right;
@@ -598,6 +602,25 @@ code {
 .es2 h1 {
     margin: 0px;
     padding: 0px;
+}
+
+.es3 {
+    margin: 0px;
+}
+
+.es3 .remark-code {
+    background: #8080804d;
+    border-radius: 16px;
+}
+
+.es3 .cblock {
+    margin-left: 164px;
+    width: 55%;
+}
+
+.es4 .cblock {
+    margin-left: 29px;
+    width: 93%;
 }
 
 .impic {
