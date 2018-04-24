@@ -788,17 +788,221 @@ class: inverse, middle, center, clojure-dark
 ]
 .demo-link[
 ### [github.com/tolitius/calip](https://github.com/tolitius/calip)
-]
+]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > .current[data stores] > messaging > portability]
+
+.dstores[
+# talking to [data stores]()
+# SQL or not
 ]
 ---
-class: inverse, middle, center
-# communication with [data stores]()
-.right-column[
-.lleft[
-.same-needs[
-### - SQL
-### - or not
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > .current[data stores] > messaging > portability]
+
+.jftw[
+# [Java]() libraries FTW
+# [Clojure]() libraries on top
+### usually to add function composition
+]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > .current[data stores] > messaging > portability]
+
+.jftw[
+# SQL
+[github.com/clojure/java.jdbc](https://github.com/clojure/java.jdbc)
+
+[github.com/funcool/clojure.jdbc](https://github.com/funcool/clojure.jdbc)
+]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > .current[data stores] > messaging > portability]
+
+.csql[
+# SQL
+
+.es5[
+.cblock[
+```clojure
+(def dbspec "postgresql://user:password@localhost:5432/dbname")
+```
 ]]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > .current[data stores] > messaging > portability]
+
+.csql[
+# SQL
+
+.es5[
+.cblock[
+```clojure
+(def dbspec "postgresql://user:password@localhost:5432/dbname")
+```
+.es6[
+```clojure
+(with-open [conn (jdbc/connection dbspec)]
+	  (do-something-with conn))
+```
+]]]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > .current[data stores] > messaging > portability]
+
+.csql[
+# SQL
+
+.es5[
+.cblock[
+```clojure
+(def dbspec "postgresql://user:password@localhost:5432/dbname")
+```
+.es6[
+```clojure
+(with-open [conn (jdbc/connection dbspec)]
+	  (do-something-with conn))
+```
+]
+.es10[
+```clojure
+(with-open [conn (jdbc/connection dbspec)]
+	  (jdbc/execute conn ["insert into foo (name) values (?);"
+                          "Foo"]))
+```
+]
+]]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > .current[data stores] > messaging > portability]
+
+.csql[
+# SQL
+
+.es5[
+.cblock[
+```clojure
+(def dbspec "postgresql://user:password@localhost:5432/dbname")
+```
+.es6[
+```clojure
+(with-open [conn (jdbc/connection dbspec)]
+	  (do-something-with conn))
+```
+]
+.es10[
+```clojure
+(with-open [conn (jdbc/connection dbspec)]
+	  (jdbc/execute conn ["insert into foo (name) values (?);"
+                          "Foo"]))
+```
+]
+.es7[
+```clojure
+(jdbc/atomic conn
+  (do-thing-first conn)
+  (do-thing-second conn))
+```
+]
+]]]
+
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > .current[data stores] > messaging > portability]
+
+.csql[
+# SQL
+
+.es5[
+.cblock[
+.es8[
+```clojure
+(def ds (hikari/make-datasource
+         {:connection-timeout 30000
+          :idle-timeout 600000
+          :max-lifetime 1800000
+          :minimum-idle 10
+          :maximum-pool-size  10
+          :adapter "postgresql"
+          :username "username"
+          :password "password"
+          :database-name "database"
+          :server-name "localhost"
+          :port-number 5432}))
+```
+]
+]]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > .current[data stores] > messaging > portability]
+
+.csql[
+# SQL
+
+.es5[
+.cblock[
+.es8[
+```clojure
+(def ds (hikari/make-datasource
+         {:connection-timeout 30000
+          :idle-timeout 600000
+          :max-lifetime 1800000
+          :minimum-idle 10
+          :maximum-pool-size  10
+          :adapter "postgresql"
+          :username "username"
+          :password "password"
+          :database-name "database"
+          :server-name "localhost"
+          :port-number 5432}))
+```
+]
+.es9[
+```clojure
+(with-open [conn (jdbc/connection ds)]
+  (do-stuff conn))
+```
+]
+]]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > .current[data stores] > messaging > portability]
+
+.nsql[
+# [not]() SQL
+
+.nsql-t[
+| | |
+|-------------:|:-------------|
+| redis     | [github.com/ptaoussanis/carmine](https://github.com/ptaoussanis/carmine) |
+| hazelcast | [github.com/tolitius/chazel](https://github.com/tolitius/chazel) |
+| cassandra | [github.com/mpenet/alia](https://github.com/mpenet/alia) |
+| hbase     | [github.com/tolitius/cbass](https://github.com/tolitius/cbass) |
+| neo4j     | [github.com/michaelklishin/neocons](https://github.com/michaelklishin/neocons) |
+| dynamo    | [github.com/ptaoussanis/faraday](https://github.com/ptaoussanis/faraday) |
+]
+]
 
 ---
 class: inverse, middle, center

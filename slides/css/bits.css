@@ -519,6 +519,22 @@ code {
     margin: 40px 0px 0px 275px;
 }
 
+.dstores {
+    margin: 197px 0px -285px 0px;
+}
+
+.jftw {
+    margin: 203px 0px -285px 0px;
+}
+
+.csql {
+    margin: 40px 0px -285px 0px;
+}
+
+.nsql {
+    margin: 90px 0px -285px 0px;
+}
+
 .aop-examples {
     margin: 107px 0px -285px 0px;
 }
@@ -621,6 +637,51 @@ code {
 .es4 .cblock {
     margin-left: 29px;
     width: 93%;
+}
+
+.es5 {
+    margin: 0px;
+}
+
+.es5 .remark-code {
+    background: #8080804d;
+    border-radius: 16px;
+}
+
+.es5 .cblock {
+    margin-left: -13px;
+    width: 104%;
+}
+
+.es6 {
+    width: 68%;
+    margin-left: 119px;
+}
+
+.es7 {
+    width: 42%;
+    margin-left: 222px;
+}
+
+.es8 {
+    width: 58%;
+    margin-left: 162px;
+}
+
+.es9 {
+    width: 62%;
+    margin-left: 144px;
+}
+
+.nsql-t {
+   font-family: 'Yanone Kaffeesatz';
+   color: white;
+   font-size: 2.1em;
+   margin: 38px 0px 0px 65px;
+}
+
+.nsql-t a {
+   margin-left: 40px;
 }
 
 .impic {
