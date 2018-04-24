@@ -593,6 +593,18 @@ code {
     margin: 213px 0px -200px 0px;
 }
 
+.msg-meta {
+    margin-top: 177px;
+}
+
+.cass {
+    margin: -5px 0px -302px 0px;
+}
+
+.cass .remark-code {
+    font-size: 1.067em;
+}
+
 .es1 {
     margin-bottom: -200px
 }
@@ -676,8 +688,8 @@ code {
 .nsql-t {
    font-family: 'Yanone Kaffeesatz';
    color: white;
-   font-size: 2.1em;
-   margin: 38px 0px 0px 65px;
+   font-size: 1.9em;
+   margin: 38px 0px 0px 141px;
 }
 
 .nsql-t a {

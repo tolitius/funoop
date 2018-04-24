@@ -1003,18 +1003,85 @@ class: inverse, middle, center, clojure-dark
 | dynamo    | [github.com/ptaoussanis/faraday](https://github.com/ptaoussanis/faraday) |
 ]
 ]
-
 ---
-class: inverse, middle, center
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > .current[data stores] > messaging > portability]
+
+.csql[
+.cass[
+# [no]()SQL
+
+.es5[
+.cblock[
+```clojure
+(def cluster (alia/cluster {:contact-points ["localhost"]}))
+(def session (alia/connect cluster))
+```
+.es5[
+```clojure
+(alia/execute session "CREATE KEYSPACE jeeconf
+                       WITH replication = {'class': 'SimpleStrategy',
+                                           'replication_factor' : 3};")
+```
+]
+.es5[
+```clojure
+(alia/execute session "USE jeeconf;")
+(alia/execute session "CREATE TABLE speakers (nick varchar,
+                                              emails set<text>,
+                                              created timestamp,
+                                              PRIMARY KEY (nick));")
+```
+]
+.es5[
+```clojure
+(alia/execute session (select :speakers
+                              (where {:nick "tolitius"})
+                              (columns :emails)))
+```
+]]]]]
+---
+class: inverse, middle, center, clojure-dark
+.fff[
+## state > configuration > AOP > .current[data stores] > messaging > portability
+
+
+.demo[
+`&lt;demo/&gt;`
+]
+
+.demo-link[
+### hazelcast: [github.com/tolitius/chazel](https://github.com/tolitius/chazel)
+]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > data stores > .current[messaging] > portability]
+
+.intro[
+.msg-meta[
 # sending / receiving [events]()
-.right-column[
 .lleft[
 .same-needs[
 ### - message brokers
 ### - HTTP endpoints (REST or not)
 ### - zeromq
 ### - etc.
-]]]
+]]]]
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 class: inverse, middle, center
@@ -1037,7 +1104,6 @@ class: inverse, middle, center
 ### - non blocking I/O
 ### - etc.
 ]]]
-
 
     </textarea>
     <script src="js/remark-latest.min.js"></script>
