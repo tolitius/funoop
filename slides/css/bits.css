@@ -458,6 +458,29 @@ code {
     background-position: right 71px;
 }
 
+.tl {
+    text-align: left;
+    font-family: 'Droid Serif';
+    font-size: 0.9em;
+    color: #ffffffb3;
+}
+
+.tlh {
+    color: white;
+}
+
+.msp {
+    margin: 72px 0px -213px 0px;
+    font-family: 'Yanone Kaffeesatz';
+    font-size: 1.2em;
+}
+
+.osp {
+    margin: 282px 0px -235px 0px;
+    font-family: 'Yanone Kaffeesatz';
+    font-size: 1.2em;
+}
+
 .fff h2 {
     margin: -287px 0px 0px -60px;
     color: #80808080;

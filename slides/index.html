@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <title>Clojure Bits on JVM</title>
     <style>
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(css/droid-serif.css);
+      @import url(css/yanone-kaffeesatz.css);
+      @import url(css/ubuntu-mono.css);
     </style>
     <link rel="stylesheet" type="text/css" href="css/bits.css">
   </head>
@@ -653,6 +653,31 @@ class: inverse, middle, center, clojure-dark
 .demo-link[
 ### [github.com/tolitius/funoop/tree/master/state](https://github.com/tolitius/funoop/tree/master/state)
 ]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## .current[state] > configuration > data stores > messaging > AOP > portability
+]
+
+.msp[
+## mount (library)
+roughly "Spring _after_ JavaConfig"
+
+.tl[
+* states are created anywhere in the app (similar to .tlh[@Component])
+* on start mount does a ".tlh[component scan]" and injects dependencies
+]]
+
+.osp[
+## component / integrant (frameworks)
+roughly "Spring 2.X _before_ JavaConfig"
+
+.tl[
+* states are defined in one place (similar to .tlh[Spring XML])
+* functions that need state have to plugin to the framework
+]]
+---
 
     </textarea>
     <script src="js/remark-latest.min.js"></script>
