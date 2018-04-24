@@ -353,76 +353,6 @@ class: inverse, middle, center
 ### - databases
 ### - thread pools workers
 ### - etc.]]]
-
----
-class: inverse, middle, center
-# external [configuration]()
-.right-column[
-.lleft[
-.same-needs[
-### - ENV variables
-### - property files
-### - Zookeeper
-### - Consul
-### - etc.]]]
-
----
-class: inverse, middle, center
-# [cross]() cutting concerns
-.right-column[
-.lleft[
-.same-needs[
-### - logging
-### - exception handling
-### - transaction management
-### - security
-### - profiling
-### - etc.]]]
-
----
-class: inverse, middle, center
-# communication with [data stores]()
-.right-column[
-.lleft[
-.same-needs[
-### - SQL
-### - or not
-]]]
-
----
-class: inverse, middle, center
-# sending / receiving [events]()
-.right-column[
-.lleft[
-.same-needs[
-### - message brokers
-### - HTTP endpoints (REST or not)
-### - zeromq
-### - etc.
-]]]
-
----
-class: inverse, middle, center
-# communication [across languages]()
-.right-column[
-.lleft[
-.same-needs[
-.lang[
-###  Java <=> C++ <=> Go <=> Rust <=> ...
-]]]]
-
----
-class: inverse, middle, center
-# [non]() blocking communication
-.right-column[
-.lleft[
-.same-needs[
-### - OS/VM threads
-### - CSP (Go routines, green threads)
-### - non blocking I/O
-### - etc.
-]]]
-
 ---
 class: middle, center
 .ctm[
@@ -597,14 +527,14 @@ class: inverse, middle, center
 ---
 class: inverse, middle, center, clojure-dark
 .fff[
-## .current[state] > configuration > data stores > messaging > AOP > portability
+## .current[state] > configuration > AOP > data stores > messaging > portability
 ]
 
 # atoms
 ---
 class: inverse, middle, center, clojure-dark
 .fff[
-## .current[state] > configuration > data stores > messaging > AOP > portability
+## .current[state] > configuration > AOP > data stores > messaging > portability
 ]
 
 # atoms
@@ -617,7 +547,7 @@ but instead ".mcode[AtomicWhateverTypeYouNeed]"
 ---
 class: inverse, middle, center, clojure-dark
 .fff[
-## .current[state] > configuration > data stores > messaging > AOP > portability
+## .current[state] > configuration > AOP > data stores > messaging > portability
 ]
 
 # atoms
@@ -643,7 +573,7 @@ but instead ".mcode[AtomicWhateverTypeYouNeed]"
 ---
 class: inverse, middle, center, clojure-dark
 .fff[
-## .current[state] > configuration > data stores > messaging > AOP > portability
+## .current[state] > configuration > AOP > data stores > messaging > portability
 
 
 .demo[
@@ -657,11 +587,11 @@ class: inverse, middle, center, clojure-dark
 class: inverse, middle, center, clojure-dark
 
 .fff[
-## .current[state] > configuration > data stores > messaging > AOP > portability
+## .current[state] > configuration > AOP > data stores > messaging > portability
 ]
 
 .msp[
-## mount (library)
+## [mount](https://github.com/tolitius/mount) (library)
 roughly "Spring _after_ JavaConfig"
 
 .tl[
@@ -670,14 +600,173 @@ roughly "Spring _after_ JavaConfig"
 ]]
 
 .osp[
-## component / integrant (frameworks)
+## [component](https://github.com/stuartsierra/component) / [integrant](https://github.com/weavejester/integrant) (frameworks)
 roughly "Spring 2.X _before_ JavaConfig"
 
 .tl[
+.otl[
 * states are defined in one place (similar to .tlh[Spring XML])
 * functions that need state have to plugin to the framework
+]]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > .current[configuration] > AOP > data stores > messaging > portability
+]
+
+.csp[
+* Local Files
+* System Properties
+* ENV Variables
+* Remote Services
+  - Zookeeper,
+  - Consul
+  - etcd
+* Secure Stores
+  - Vault
+  - encrypted in DB
+  - keystores
+  - secure fs mounts
+* etc.
+]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > .current[configuration] > AOP > data stores > messaging > portability
+]
+
+.csp[
+* Local Files
+* System Properties
+* ENV Variables
+* Remote Services
+  - Zookeeper,
+  - Consul
+  - etcd
+* Secure Stores
+  - Vault
+  - encrypted in DB
+  - keystores
+  - secure fs mounts
+* etc.
+]
+
+.litmus[
+.bq[
+A litmus test for whether an app has all config correctly factored out of the code is whether the codebase could be made open source at any moment, without compromising any credentials.
+]
+
+#### _source: "[12 factor app](https://12factor.net/config)"_]
+---
+class: middle, center, hubble
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > .current[configuration] > AOP > data stores > messaging > portability
+]
+
+
+.es2[
+
+# hubble [config]()
+
+.cblock[
+```clojure
+{:hubble {:server {:port 4242}
+          :store {:url "spacecraft://tape"}
+          :camera {:mode "mono"}
+          :mission {:target "Eagle Nebula"}
+
+          :log {:enabled false
+                :auth-token "OVERRIDE ME"
+                :name "hubble-log"
+                :hazelcast {:hosts "OVERRIDE ME"
+                            :group-name "OVERRIDE ME"
+                            :group-password "OVERRIDE ME"
+                            :retry-ms 5000
+                            :retry-max 720000}}
+
+          :vault {:url "OVERRIDE ME"}}}
+```
 ]]
 ---
+class: inverse, middle, center, clojure-dark
+.fff[
+## state > .current[configuration] > AOP > data stores > messaging > portability
+
+
+.demo[
+`&lt;demo/&gt;`
+]
+
+.demo-link[
+### [github.com/tolitius/hubble](https://github.com/tolitius/hubble)
+]]
+
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > .current[AOP] > data stores > messaging > portability]
+
+.intro[
+# [cross]() cutting concerns
+.lleft[
+.same-needs[
+### - logging
+### - exception handling
+### - transaction management
+### - security
+### - profiling
+### - etc.]]]
+
+---
+class: inverse, middle, center
+# communication with [data stores]()
+.right-column[
+.lleft[
+.same-needs[
+### - SQL
+### - or not
+]]]
+
+---
+class: inverse, middle, center
+# sending / receiving [events]()
+.right-column[
+.lleft[
+.same-needs[
+### - message brokers
+### - HTTP endpoints (REST or not)
+### - zeromq
+### - etc.
+]]]
+
+---
+class: inverse, middle, center
+# communication [across languages]()
+.right-column[
+.lleft[
+.same-needs[
+.lang[
+###  Java <=> C++ <=> Go <=> Rust <=> ...
+]]]]
+
+---
+class: inverse, middle, center
+# [non]() blocking communication
+.right-column[
+.lleft[
+.same-needs[
+### - OS/VM threads
+### - CSP (Go routines, green threads)
+### - non blocking I/O
+### - etc.
+]]]
+
 
     </textarea>
     <script src="js/remark-latest.min.js"></script>

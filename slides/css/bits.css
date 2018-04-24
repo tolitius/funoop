@@ -450,9 +450,18 @@ code {
     background-image: url("../img/vs-container.png");
     background-size: cover;
 }
+
 .mission {
     background-color: #e0e0e0;
     background-image: url("../img/mission.png");
+    background-size: 908px;
+    background-repeat: no-repeat;
+    background-position: right 71px;
+}
+
+.hubble {
+    background-color: #e0e0e0;
+    background-image: url("../img/hubble-config.jpg");
     background-size: 908px;
     background-repeat: no-repeat;
     background-position: right 71px;
@@ -463,6 +472,10 @@ code {
     font-family: 'Droid Serif';
     font-size: 0.9em;
     color: #ffffffb3;
+}
+
+.otl {
+    margin-left: 40px;
 }
 
 .tlh {
@@ -479,6 +492,46 @@ code {
     margin: 282px 0px -235px 0px;
     font-family: 'Yanone Kaffeesatz';
     font-size: 1.2em;
+}
+
+.csp {
+    margin: 37px 0px -357px 0px;
+    font-family: 'Yanone Kaffeesatz';
+    font-size: 1.7em;
+    text-align: left;
+}
+
+.csp h1 {
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.intro {
+    margin: 107px 0px -285px 0px;
+}
+
+.intro h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.intro .lleft {
+    margin: 40px 0px 0px 275px;
+}
+
+.litmus {
+    width: 60%;
+    float: right;
+    margin: -85px 0px -175px 0px;
+}
+
+.litmus h4 {
+    text-align: right;
+    margin-right: 15px;
+}
+
+.litmus p {
+    color: #ffffffb3;
 }
 
 .fff h2 {
@@ -527,6 +580,24 @@ code {
 .es1 .remark-code {
     background: #8080804d;
     border-radius: 16px;
+}
+
+.es2 {
+    margin: 46px 20px -349px 0px;
+}
+
+.es2 .remark-code {
+    background: #8080804d;
+    border-radius: 16px;
+}
+
+.es2 .cblock {
+    margin-left: 22px;
+}
+
+.es2 h1 {
+    margin: 0px;
+    padding: 0px;
 }
 
 .impic {
