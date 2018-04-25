@@ -1105,9 +1105,204 @@ class: inverse, middle, center, clojure-dark
 
 ## ... .mhl[|] push, pull .mhl[|] publish, subscribe .mhl[|] produce, consume .mhl[|] put, take .mhl[|] ...
 ]
+---
+class: inverse, middle, center, clojure-dark
 
+.fff[
+## state > configuration > AOP > data stores > .current[messaging] > portability]
 
+.aws1[
+.csql[
+.mass[
+# AWS SQS (Java Interop)
 
+.es5[
+.cblock[
+```clojure
+(:import [com.amazonaws ClientConfiguration Protocol]
+         [com.amazonaws.auth BasicAWSCredentials]
+         [com.amazonaws.regions Region Regions]
+         [com.amazonaws.services.sqs AmazonSQSClient]
+         [com.amazonaws.services.sqs.model Message
+                                           DeleteMessageRequest
+                                           ReceiveMessageRequest
+                                           GetQueueAttributesRequest]))
+```
+.es5[
+```clojure
+(defn create-sqs-client [{:keys [access-key secret-key region]}
+                         configs]
+  (let [creds (BasicAWSCredentials. access-key secret-key)]
+    (doto (AmazonSQSClient. creds configs)
+          (.setRegion (Region/getRegion (Regions/fromName region))))))
+```
+]]]]]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > data stores > .current[messaging] > portability]
+
+.aws2[
+.csql[
+.mass[
+# AWS SQS (Java Interop)
+
+.es5[
+```clojure
+(defn receive-messages [{:keys [sqs-client
+                                queue-url
+                                max-msg
+                                visibility-timeout-sec]
+                         :or {visibility-timeout-sec 15
+                              max-msg 10}}]
+  (let [msg-req (doto (ReceiveMessageRequest. queue-url)
+                        (.setMaxNumberOfMessages max-msg)
+                        (.setVisibilityTimeout visibility-timeout-sec))]
+    (mapv message-to-map (.. sqs-client (receiveMessage msg-req)
+                                        (getMessages)))))
+```
+]]]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > data stores > .current[messaging] > portability]
+
+.kafka1[
+.csql[
+.mass[
+# Kafka
+
+.es5[
+.cblock[
+```clojure
+(defstate consumer :start (gregor/consumer "localhost:9092"
+                                           "testgroup"
+                                           ["test-topic"]
+                                           {"auto.offset.reset" "earliest"
+                                            "enable.auto.commit" "false"})
+                   :stop (gregor/close consumer))
+
+(defstate producer :start (gregor/producer "localhost:9092")
+                   :stop (gregor/close producer))
+```
+.es5[
+```clojure
+(let [consumer-records (gregor/poll consumer)
+      values (process-records consumer-records)]
+  (doseq [v values]
+    (gregor/send producer "other-topic" v))
+  (gregor/commit-offsets! consumer)))
+```
+]]]]]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > data stores > .current[messaging] > portability]
+
+.zero1[
+.csql[
+.mass[
+# zeromq (Java Interop)
+
+.es5[
+.cblock[
+```clojure
+(:import [org.zeromq ZMQ ZMQ$Context ZMQ$Socket ZMQQueue])
+
+(defonce single-context (ZMQ/context 1))
+
+(defn bind [socket url]
+  (doto socket
+        (.bind url)))
+
+(defn socket [context type]
+  (.socket context type))
+```
+.es5[
+```clojure
+(defn zsocket [queue]
+  (let [sock (-> mq/single-context
+                 (mq/socket mq/pub)
+                 (mq/bind queue))]
+    (log/info "producer is bound to [" queue "], let's rock'n'roll")
+    sock))
+```
+]]]]]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > data stores > .current[messaging] > portability]
+
+.zero2[
+.csql[
+.mass[
+# zeromq (Java Interop)
+
+.es5[
+.cblock[
+.es5[
+```clojure
+(defn subscribe
+  ([socket topic]
+   (doto socket
+     (.subscribe (.getBytes topic))))
+  ([socket]
+   (subscribe socket "")))
+```
+]
+.es5[
+```clojure
+(defn send-bytes [^ZMQ$Socket socket ^bytes message]
+  (.send socket message 0))
+
+(defn recv-bytes [socket]
+  (.recv socket 0))
+```
+]
+]]]]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > data stores > .current[messaging] > portability]
+
+.coreas[
+.csql[
+.mass[
+# Communicating Sequential Processes
+
+.es5[
+.cblock[
+.es5[
+```clojure
+(defn GET [url]
+  (let [ch (chan)]
+    (xhr/send url
+              (fn [event]
+                (let [res (-> event .-target .getResponseText)]
+                  (go (>! ch res))))
+              "GET")
+    ch))
+```
+]
+.es5[
+```clojure
+(defn race [q]
+  (let [t (timeout timeout-ms)
+        start (now)]
+    (go
+      (alt!
+        (GET (str "/yahoo?q=" q))  ([v] (winner :.yahoo v (took start)))
+        (GET (str "/bing?q=" q))   ([v] (winner :.bing v (took start)))
+        (GET (str "/google?q=" q)) ([v] (winner :.google v (took start)))
+        t                          ([v] (show-timeout timeout-ms))))))
+```
+]
+]]]]]
 
 
 
