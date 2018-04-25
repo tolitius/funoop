@@ -1067,13 +1067,44 @@ class: inverse, middle, center, clojure-dark
 .lleft[
 .same-needs[
 ### - message brokers
-### - HTTP endpoints (REST or not)
 ### - zeromq
+### - message passing
 ### - etc.
 ]]]]
 
+---
+class: inverse, middle, center, clojure-dark
 
+.fff[
+## state > configuration > AOP > data stores > .current[messaging] > portability]
+.mheader[
 
+.mh-t[
+.msgb[
+### brokers
+| | |
+|-------------:|:-------------|
+| aws sqs     | [github.com/aws/aws-sdk-java](https://github.com/aws/aws-sdk-java) |
+| kafka       | [github.com/ccann/gregor](https://github.com/ccann/gregor) |
+| rabbitmq    | [github.com/michaelklishin/langohr](https://github.com/michaelklishin/langohr) |
+]
+
+.ipc[
+### brokerless
+| | |
+|-------------:|:-------------|
+| zeromq      | [github.com/zeromq/jeromq](https://github.com/zeromq/jeromq) |
+]
+
+.mpass[
+### csp
+| | |
+|-------------:|:-------------|
+| core.async  | [github.com/clojure/core.async](https://github.com/clojure/core.async) |
+]]
+
+## ... .mhl[|] push, pull .mhl[|] publish, subscribe .mhl[|] produce, consume .mhl[|] put, take .mhl[|] ...
+]
 
 
 
