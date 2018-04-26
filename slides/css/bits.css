@@ -696,6 +696,22 @@ code {
    margin-left: 40px;
 }
 
+.portb {
+    margin-left: 0px;
+}
+
+.portb h3 {
+    margin-left: 230px !important;
+}
+
+.porth {
+    margin-left: 128px;
+}
+
+.porth h3 {
+    margin-left: 102px !important;
+}
+
 .msgb {
     margin-left: 12px;
 }
@@ -824,6 +840,37 @@ code {
     text-align: left;
     margin: 35px 0px 0px -19px;
     width: 101.5%;
+}
+
+.ph-t {
+   font-family: 'Yanone Kaffeesatz';
+   color: white;
+   font-size: 1.9em;
+   margin: -39px 0px 0px 81px;
+}
+
+.ph-t a {
+   margin-left: 40px;
+}
+
+.port-t h3 {
+    color: #ffc1c1;
+}
+
+.port-fade, .port-fade a {
+   color: #8080804d;
+}
+
+.pwhite {
+   color: white;
+}
+
+.plink a {
+   color: rgb(249, 38, 114);
+}
+
+.chl {
+    color: white;
 }
 
 .impic {

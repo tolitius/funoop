@@ -1303,32 +1303,76 @@ class: inverse, middle, center, clojure-dark
 ```
 ]
 ]]]]]
-
-
-
-
-
-
 ---
-class: inverse, middle, center
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > data stores > messaging > .current[portability]]
+
+.intro[
+.msg-meta[
 # communication [across languages]()
-.right-column[
-.lleft[
-.same-needs[
-.lang[
-###  Java <=> C++ <=> Go <=> Rust <=> ...
-]]]]
-
+.port-t[
+###  Clojure .chl[<=>] Java .chl[<=>] Go .chl[<=>] Rust .chl[<=>] C.chl[<=>] Fortran
+]]]
 ---
-class: inverse, middle, center
-# [non]() blocking communication
-.right-column[
-.lleft[
-.same-needs[
-### - OS/VM threads
-### - CSP (Go routines, green threads)
-### - non blocking I/O
-### - etc.
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > data stores > messaging > .current[portability]]
+.mheader[
+
+.ph-t[
+.portb[
+### binary
+| | |
+|-------------:|:-------------|
+| avro              | [github.com/damballa/abracad](https://github.com/damballa/abracad)
+| protocol buffers  | [github.com/clojusc/protobuf](https://github.com/clojusc/protobuf)
+| nippy             | [github.com/ptaoussanis/nippy](https://github.com/ptaoussanis/nippy)
+| kryo              | [github.com/sritchie/carbonite](https://github.com/sritchie/carbonite)
+| message pack      | [github.com/edma2/clojure-msgpack](https://github.com/edma2/clojure-msgpack)
+| transit           | [github.com/cognitect/transit-clj](https://github.com/cognitect/transit-clj)
+]
+
+.porth[
+### human readable
+| | |
+|-------------:|:-------------|
+| json  | [github.com/dakrone/cheshire](https://github.com/dakrone/cheshire)
+| xml   | [github.com/clojure/data.xml](https://github.com/clojure/data.xml)
+| yaml  | [github.com/owainlewis/yaml](https://github.com/owainlewis/yaml)
+]
+]]
+---
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > AOP > data stores > messaging > .current[portability]]
+.mheader[
+
+.ph-t[
+.port-fade[
+.portb[
+### binary
+| | |
+|-------------:|:-------------|
+| avro              | [github.com/damballa/abracad](https://github.com/damballa/abracad)
+| protocol buffers  | [github.com/clojusc/protobuf](https://github.com/clojusc/protobuf)
+| .pwhite[nippy]             | <span class="plink">[github.com/ptaoussanis/nippy](https://github.com/ptaoussanis/nippy)</span>
+| kryo              | [github.com/sritchie/carbonite](https://github.com/sritchie/carbonite)
+| message pack      | [github.com/edma2/clojure-msgpack](https://github.com/edma2/clojure-msgpack)
+| .pwhite[transit]           | <span class="plink">[github.com/cognitect/transit-clj](https://github.com/cognitect/transit-clj)</span>
+]
+
+.porth[
+### human readable
+| | |
+|-------------:|:-------------|
+| json  | [github.com/dakrone/cheshire](https://github.com/dakrone/cheshire)
+| xml   | [github.com/clojure/data.xml](https://github.com/clojure/data.xml)
+| yaml  | [github.com/owainlewis/yaml](https://github.com/owainlewis/yaml)
+]
 ]]]
 
     </textarea>
