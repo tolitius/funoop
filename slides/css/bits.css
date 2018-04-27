@@ -842,6 +842,59 @@ code {
     width: 101.5%;
 }
 
+.jport {
+   margin-top: -46px
+}
+
+.trava {
+   font-size: 1.2em;
+   margin: 0px 0px -28px 536px;
+   padding: 0px;
+   font-family: 'Yanone Kaffeesatz';
+}
+
+.es11 {
+   float: left;
+   width: 47%;
+}
+
+.es12 {
+   float: right;
+   width: 48%;
+   margin-right: -6px;
+}
+
+.code-next {
+   clear: both;
+   margin-top: -47px;
+}
+
+.portas {
+    margin: -19px 0px -410px 0px;
+}
+
+.portas h1 {
+    margin: 83px 0px -7px 0px;
+}
+
+.jtport h1 {
+    margin: 44px 0px -7px 0px !important;
+}
+
+.gtport h1 {
+    margin: 50px 0px -6px 0px !important;
+}
+
+.gtport .csql {
+    margin: 44px 0px -7px 0px !important;
+}
+
+.portas .remark-code {
+    text-align: left;
+    margin: 35px 0px 0px -19px;
+    width: 101.5%;
+}
+
 .ph-t {
    font-family: 'Yanone Kaffeesatz';
    color: white;
