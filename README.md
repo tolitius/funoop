@@ -1,5 +1,9 @@
 # funoop
 
+> _initially created for [jeeconf 2018](https://jeeconf.com/)_
+
+> _slides: [gitpod.com/talks/jeeconf.2018](http://gitpod.com/talks/jeeconf.2018)_
+
 Out of many strong JVM based languages Clojure and Java make a great couple.
 
 Coming to Clojure from Spring/Java several years ago I really wished back then someone could explain functional programming and Clojure echo system to me from the Spring/Java point of view.
