@@ -314,19 +314,31 @@ code {
     width: 600px;
 }
 
-.crepl{
-    width: 75%;
-    margin-left: 48px;
+.crepl {
+    width: 106%;
+    margin-left: -38px;
+}
+
+.crepl .remark-code {
+   font-size: 1.3em;
 }
 
 .meta {
-    margin: -51px 0px -16px 120px;
-    width: 700px;
+   margin: -56px 0px -11px 225px;
 }
 
 .meta h3 {
-    margin: 0px;
-    padding 0px;
+   margin: 0px;
+   padding: 0px;
+}
+
+.meta-repl1 {
+   margin-left: 27px;
+}
+
+.meta-repl2 {
+   margin-left: -7px;
+   width: 103%;
 }
 
 .clj pre code div {
@@ -610,7 +622,7 @@ code {
 }
 
 .es1 {
-    margin-bottom: -200px
+    margin-bottom: -300px
 }
 
 .es1 .remark-code {

@@ -294,14 +294,14 @@ class: inverse, middle, center, ccol
 ## commands [|]() send [|]() navigate [|]() capture [|]() send back
 
 .shell[
-$ .lhl[cut] -f 2 report | .lhl[sort] -o | .lhl[uniq] -c
+$ .lhl[cut] -f 2 data | .lhl[sort] -o | .lhl[uniq] -c
 ]
 ---
 class: inverse, middle, center, ccol
 ## commands [|]() send [|]() navigate [|]() capture [|]() send back
 
 .shell[
-$ .lhl[cut] -f 2 report | .lhl[sort] -o | .lhl[uniq] -c
+$ .lhl[cut] -f 2 data | .lhl[sort] -o | .lhl[uniq] -c
 ]
 
 ## v1 [&gt;]() v2 [&gt;]() v3 [&gt;]() v4 [&gt;]() ... [&gt;]() v42
@@ -310,7 +310,7 @@ class: inverse, middle, center, ccol
 ## commands [|]() send [|]() navigate [|]() capture [|]() send back
 
 .shell[
-$ .lhl[cut] -f 2 report | .lhl[sort] -o | .lhl[uniq] -c
+$ .lhl[cut] -f 2 data | .lhl[sort] -o | .lhl[uniq] -c
 ]
 
 ## v1 [&gt;]() v2 [&gt;]() v3 [&gt;]() v4 [&gt;]() ... [&gt;]() v42
@@ -359,66 +359,6 @@ class: middle, center
 <img src="img/clojure-logo.png" width="20%">
 ]
 # [state]() management
----
-layout: false
-class: middle
-.left-column[
-  ## [spring]() docs
-]
-.right-column[
-.bq[<span>IoC is also known as dependency injection</span>
-<span>(DI), it's a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
-<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
-]
----
-layout: false
-class: middle
-.left-column[
-  ## [spring]() docs
-]
-.right-column[
-.bq[<span>IoC is also known as dependency injection</span>
-<span>(DI), it's a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
-<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
-
-.rcc[
-## design is based on .rcch[components talking] to each other
-]]
----
-layout: false
-class: middle
-.left-column[
-  ## [spring]() docs
-]
-.right-column[
-.bq[<span>IoC is also known as dependency injection</span>
-<span>(DI), it's a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
-<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
-
-.rcc[
-## design is based on .rcch[components talking] to each other
-```
-Java/OOP + Spring..........                           [makes sense ✔]
-```
-]]
----
-layout: false
-class: middle
-.left-column[
-  ## [spring]() docs
-]
-.right-column[
-.bq[<span>IoC is also known as dependency injection</span>
-<span>(DI), it's a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
-<p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
-
-.rcc[
-## design is based on .rcch[components talking] to each other
-```
-Java/OOP + Spring..........                           [makes sense ✔]
-design approach............                           [solid ✔]
-```
-]]
 ---
 class: inverse, middle, center
 # library [vs.]() framework
@@ -489,9 +429,12 @@ class: inverse, middle, center
 repl=> (send-message kafka message)
 ```
 .meta[
-###  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ^ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^</br>
-### &nbsp;&nbsp;&nbsp;function &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; state &nbsp;&nbsp;&nbsp;&nbsp; other arguments
-]]]]
+.meta-repl1[
+### ^  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ^ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^
+]
+.meta-repl2[
+### function &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; state &nbsp;&nbsp; other arguments
+]]]]]
 ---
 class: inverse, middle, center
 .cfa[
@@ -568,6 +511,38 @@ but instead ".mcode[AtomicWhateverTypeYouNeed]"
 (defn start [conf]
   (reset! app-state {:db (db-connect conf)
                      :cache (cache-connect conf)}))
+```
+]]]
+---
+class: inverse, middle, center, clojure-dark
+.fff[
+## .current[state] > configuration > aop > data stores > messaging > portability
+]
+
+# atoms
+.wt-text[
+
+think AtomicLong, AtomicInteger
+
+but instead ".mcode[AtomicWhateverTypeYouNeed]"
+<br/><br/>
+.es1[
+.cblock[
+```clojure
+(def app-state (atom {}))
+```
+]
+.cblock[
+```clojure
+(defn start [conf]
+  (reset! app-state {:db (db-connect conf)
+                     :cache (cache-connect conf)}))
+```
+]
+.cblock[
+```clojure
+(defn find-life [{:keys [db]} planet]
+  (jdbc/fetch db ["select water from ?" planet]))
 ```
 ]]]
 ---
