@@ -384,7 +384,7 @@ class: middle
 <p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
 
 .rcc[
-## design is based on .rcch[components talking] to each other]
+## design is based on .rcch[stateful components talking] to each other]
 .oop-solid[
 .jsf-ms[
 Java + Spring......... [makes sense .check[✔]]
@@ -573,7 +573,7 @@ roughly "Spring _after_ JavaConfig"
 
 .tl[
 * states are created anywhere in the app (similar to .tlh[@Component])
-* on start mount does a ".tlh[component scan]" and injects dependencies
+* on start mount does a ".tlh[component scan]" and creates components
 ]]
 
 .osp[
@@ -583,7 +583,7 @@ roughly "Spring 2.X _before_ JavaConfig"
 .tl[
 .otl[
 * states are defined in one place (similar to .tlh[Spring XML])
-* functions that need state have to plugin to the framework
+* functions that need state _have to plugin_ to the framework
 ]]]
 ---
 class: inverse, middle, center, clojure-dark
@@ -1352,6 +1352,88 @@ class: inverse, middle, center, clojure-dark
 ]
 ]]]
 ---
+
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > aop > data stores > messaging > .current[portability]]
+.jtport[
+.portas[
+.csql[
+.mass[
+# protobuf [| Clojure]()
+<p class="protol"><a href="https://github.com/clojusc/protobuf">github.com/clojusc/protobuf</a></p>
+.es5[
+.cblock[
+.es5[
+```proto
+package your.namespace.person;
+
+option java_outer_classname = "Example";
+
+message Person {
+  required int32  id    = 1;
+  required string name  = 2;
+  optional string email = 3;
+  repeated string likes = 4;
+}
+```
+]
+.es5[
+```clojure
+(require '[protobuf.core :as protobuf])
+(import (your.namespace.person Example$Person)
+
+(def alice (protobuf/create Example$Person
+                            {:id 108
+                             :name "Alice"
+                             :email "alice@example.com"}))
+```
+]
+]]]]]]
+
+---
+
+class: inverse, middle, center, clojure-dark
+
+.fff[
+## state > configuration > aop > data stores > messaging > .current[portability]]
+.prport[
+.portas[
+.csql[
+.mass[
+# protobuf [| Clojure]()
+<p class="protol"><a href="https://github.com/clojusc/protobuf">github.com/clojusc/protobuf</a></p>
+.es5[
+.cblock[
+.es5[
+```clojure
+;; to bytes
+(def a-bytes (-> alice
+                 (assoc :name "Alice B. Carol")
+                 (assoc :likes ["climbing" "running" "jumping"])
+                 (protobuf/->bytes)))
+```
+]
+
+.es5[
+```clojure
+;; and back
+(protobuf/bytes-> alice a-bytes)
+```
+]
+
+.es5[
+```clojure
+{:id 108,
+ :name "Alice B. Carol",
+ :email "alice@example.com",
+ :likes ["climbing" "running" "jumping"]}
+```
+]
+]]]]]]
+
+---
 class: inverse, middle, center, clojure-dark
 
 .fff[
@@ -1487,7 +1569,8 @@ class: first-slide, center, middle, inverse
       var slideshow = remark.create({
           highlightStyle: 'monokai',
           highlightLanguage: 'remark',
-          highlightLines: true
+          highlightLines: true,
+          ratio: '4:3'
         }) ;
     </script>
   </body>

@@ -100,6 +100,11 @@ code {
     color: gray;
 }
 
+.rcc h2 {
+   width: 107%;
+   margin-left: -54px;
+}
+
 .rcc .check {
     color: green;
 }
@@ -879,6 +884,14 @@ code {
    font-family: 'Yanone Kaffeesatz';
 }
 
+.protol {
+   font-size: 1.2em;
+   margin: 0px 0px -28px 545px;
+   padding: 0px;
+   font-family: 'Yanone Kaffeesatz';
+   width: 31%;
+}
+
 .es11 {
    float: left;
    width: 47%;
@@ -905,6 +918,10 @@ code {
 
 .jtport h1 {
     margin: 44px 0px -7px 0px !important;
+}
+
+.prport h1 {
+    margin: 78px 0px -7px 0px !important;
 }
 
 .gtport h1 {
