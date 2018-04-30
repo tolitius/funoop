@@ -2,7 +2,7 @@
 
 > _initially created for [jeeconf 2018](https://jeeconf.com/)_
 
-> _slides: [gitpod.com/talks/jeeconf.2018](http://gitpod.com/talks/jeeconf.2018)_
+> _slides (made for Firefox): [gitpod.com/talks/jeeconf.2018](http://gitpod.com/talks/jeeconf.2018)_
 
 Out of many strong JVM based languages Clojure and Java make a great couple.
 

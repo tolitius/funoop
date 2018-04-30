@@ -465,3 +465,11 @@ rm -rf /jpl/mission/report/*
     (-> (assoc request :cookies {"session_id" {:value (rand-int 42)}}) ;; pretend to parse cookies from request
         handler)))
 ((web-app [{:GET {"/" (rand-int 42)}} {:POST {"/make-money" (str "made $1 dollar")}}]) {})
+(def config (mission/load-config "resources/config.edn"))
+(def directions {1 "go forward 100 meters"
+                    2 "turn right 42 degrees"
+                    3 "go forward 28.2 meters"})
+(def find-life (mission/execute config directions))
+(pprint c)
+(def config (mission/load-config "resources/config.edn"))
+(pprint config)

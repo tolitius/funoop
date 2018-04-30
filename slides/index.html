@@ -62,7 +62,7 @@ layout: false
 ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configuration
 ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data stores
 ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;messaging
-##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AOP
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aop
 ]
 ---
 class: vs-slide-2
@@ -72,7 +72,7 @@ layout: false
 ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;configuration
 ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data stores
 ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;messaging
-##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AOP
+##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aop
 ##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portability
 ]
 ---
@@ -113,8 +113,8 @@ class: center, middle, inverse
 ### - they talk via .lhl[message passing]
 ### - maps naturally to .lhl[Object Oriented] design
 .sub-left[
-### components are .lhl[classes]<br/><br/><br/></br>
-### message passing done via .lhl[method calls]
+### components are .jhl[classes]<br/><br/><br/></br>
+### message passing done via .jhl[method calls]
 ]]]
 ---
 class: inverse, middle, center
@@ -222,9 +222,10 @@ class: middle
 
 * at least one class for each <b>Instrument</b>
 ]]]
+.solid-w[
 .oop-solid[
-design approach............                           [solid .check[✔]]
-]]
+design approach............                           [S.O.L.I.D. .check[✔]]
+]]]
 ---
 layout: false
 class: middle, center
@@ -385,8 +386,9 @@ class: middle
 .rcc[
 ## design is based on .rcch[components talking] to each other]
 .oop-solid[
+.jsf-ms[
 Java + Spring......... [makes sense .check[✔]]
-]]]
+]]]]
 ---
 class: inverse, middle, center
 .cfa[
@@ -455,10 +457,10 @@ class: inverse, middle, center
 class: middle, center
 # great in theory, [but]() what about..
 .what-about[
-### database connections
-### threadpools
-### caches
-### etc.
+## database connections
+## threadpools
+## caches
+## etc.
 ]
 ---
 class: middle, center
@@ -1464,55 +1466,6 @@ Assert.assertEquals(1, Navigator.getIn(nestedMap, newPath));
 ```
 ]
 ]]]]]]
----
-class: inverse, middle, center, clojure-dark
-
-.fff[
-## state > configuration > aop > data stores > messaging > .current[portability]]
-.gtport[
-.portas[
-.csql[
-.mass[
-# transit [| Go]()
-<p class="trava"><a href="https://github.com/go-edn/edn">github.com/go-edn/edn</a></p>
-.es5[
-.cblock[
-.code-next[
-.es11[
-```go
-type Animal struct {
-   Name string
-   Type string `edn:"kind"`
-}
-```
-]
-.es12[
-```go
-type Person struct {
-   Name      string
-   Birthyear int      `edn:"born"`
-   Pets      []Animal
-}
-```
-]
-]
-.es5[
-```go
-func ReturnData() (Person, error) {
-     data := `{:name "Hans",
-               :born 1970,
-               :pets [{:name "Cap'n Jack" :kind "Sparrow"}
-                      {:name "Freddy" :kind "Cockatiel"}]}`
-     var user Person
-     err := edn.Unmarshal([]byte(data), &user)
-     // user '==' Person{"Hans", 1970, []Animal{{"Cap'n Jack", "Sparrow"},
-     //                                         {"Freddy", "Cockatiel"}}}
-     return user, err
-}
-```
-]
-]]]]]]
-
 ---
 class: inverse, middle, center
 
