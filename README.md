@@ -6,7 +6,7 @@
 
 Out of many strong JVM based languages Clojure and Java make a great couple.
 
-Coming to Clojure from Spring/Java several years ago I really wished back then someone could explain functional programming and Clojure echo system to me from the Spring/Java point of view.
+Coming to Clojure from Spring/Java several years ago I really wished back then someone could explain functional programming and Clojure ecosystem to me from the Spring/Java point of view.
 
 funoop bridges this gap by showing practical "How would you do X in Clojure" examples including:
 
