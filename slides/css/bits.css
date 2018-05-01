@@ -195,7 +195,7 @@ code {
 .oop-solid p {
     background-color: #272822;
     padding: 11px;
-    margin: 40px 0px -84px -205px;
+    margin: 40px 0px -84px -185px;
     color: #ddd;
     border-radius: 10px;
     font-size: 1.8em;
@@ -222,8 +222,8 @@ code {
 }
 
 .jsf-ms {
-    margin-left: 26px;
-    width: 101%;
+    margin-left: 19px;
+    width: 104%;
 }
 
 .gr {
@@ -279,6 +279,10 @@ code {
 
 .same-needs .lang {
     margin-left: -40px;
+}
+
+.same-needs h3 {
+   margin-left: 58px;
 }
 
 .shell {
@@ -377,14 +381,14 @@ code {
 }
 
 .cfal {
-    margin-left: 99px;
+    margin-left: 262px;
     text-align: left;
     width: 600px;
 }
 
 .crepl {
     width: 106%;
-    margin-left: -38px;
+    margin-left: -35px;
 }
 
 .crepl .remark-code {
@@ -417,13 +421,13 @@ code {
 }
 
 .why-libs {
-    margin: 32px 0px -74px 67px;
-    font-size: 0.9em;
-    padding: 0px 15px 29px 17px;
-    border: 1px solid #f5f5f533;
-    border-radius: 10px;
-    width: 76%;
-    background-color: #5d565966;
+   margin: 32px 0px -75px 152px;
+   font-size: 1.1em;
+   padding: 0px 15px 29px 17px;
+   border: 1px solid #f5f5f533;
+   border-radius: 10px;
+   width: 68%;
+   background-color: #5d565966;
 }
 
 .why-libs h2 {
@@ -431,9 +435,11 @@ code {
 }
 
 .what-about {
-    text-align: left;
-    margin-left: 200px;
-    line-height: 12px;
+   text-align: left;
+   margin-left: 401px;
+   line-height: 12px;
+   font-size: 1.2em;
+   color: #0009;
 }
 
 .needs-to-live {
@@ -444,6 +450,26 @@ code {
 
 .olc {
    margin-left: 47px;
+}
+
+
+.sleft-column {
+   color: #777;
+   width: 21%;
+   height: 92%;
+   float: left;
+   margin-left: 52px;
+}
+
+.sdesign {
+   width: 81%;
+   margin: 0px 0px 0px 68px;
+}
+
+.sright-column {
+   width: 73%;
+   float: right;
+   padding-top: 1em;
 }
 
 .mleft-column {
@@ -470,7 +496,7 @@ code {
 
 .lvf {
     text-align: left;
-    margin-left: 309px;
+    margin-left: 461px;
 }
 
 /* Slide-specific styling */
