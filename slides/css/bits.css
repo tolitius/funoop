@@ -84,8 +84,12 @@ code {
     text-align: left;
     color: #777872;
     line-height: 10px;
-    margin-left: 35px;
+    margin-left: 94px;
     font-size: 1.1em;
+}
+
+.lleft h3 {
+    font-size: 1.7em;
 }
 
 .lhl {
@@ -93,18 +97,20 @@ code {
 }
 
 .sub-left {
-   margin: 45px 0px 0px -59px;
+   margin: 45px 0px 0px -98px;
    font-size: 0.9em;
-   padding: 20px;
+   padding: 29px;
    border: 1px solid #f5f5f533;
    border-radius: 10px;
-   width: 73%;
+   width: 69%;
    background-color: #5d565966;
    color: #83847d;
+   text-align: center;
 }
 
 .sub-left h3 {
     margin-top: 0px;
+    font-size: 2.0em;
 }
 
 .rcc {
@@ -131,13 +137,13 @@ code {
 }
 
 .curiosity {
-    width: 114%;
+    width: 87%;
     border-radius: 25px;
     overflow: hidden;
 }
 
 .dsn {
-    width: 92.7%;
+    width: 73.2%;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -151,9 +157,16 @@ code {
 }
 
 .jleft {
-    font-family: "Ubuntu Mono";
-    font-size: 1.07em;
-    margin-left: 10px;
+   font-family: "Ubuntu Mono";
+   font-size: 1.2em;
+   margin-left: 154px;
+   width: 100%;
+   font-style: oblique;
+}
+
+.jcenter {
+    text-align: center;
+    margin-left: 81px;
     width: 100%;
 }
 
@@ -183,7 +196,7 @@ code {
     font-size: 1.8em;
     font-family: 'Ubuntu Mono';
     text-align: center;
-    width: 123%;
+    width: 100%;
 }
 
 .oop-solid .check {
@@ -254,7 +267,7 @@ code {
 .shell {
     background-color: black;
     padding: 0px;
-    margin: 40px 0px 0px 60px;
+    margin: 40px 0px 0px 84px;
     color: #ddd;
     border-radius: 10px;
     font-size: 1.6em;
@@ -265,23 +278,24 @@ code {
 
 .shell p {
     padding: 10px;
+    font-size: 1.5em;
 }
 
-.time-graph h2 {
+.time-graph h1 {
     margin: 0px;
     padding: 0px;
 }
 
 .immutability {
-    margin: 0px 0px 0px 201px;
-    font-size: 1.2em;
-    padding: 30px;
-    border: 1px solid #f9267299;
-    border-radius: 10px;
-    width: 37%;
-    text-align: left;
-    background-color: #f926724d;
-    color: #ffffff80;
+   margin: 0px 0px 0px 284px;
+   font-size: 1.8em;
+   padding: 30px;
+   border: 1px solid #f9267299;
+   border-radius: 10px;
+   width: 40%;
+   text-align: left;
+   background-color: #f926724d;
+   color: #ffffff80;
 }
 
 .demo code {
@@ -309,13 +323,15 @@ code {
 }
 
 .mission-thumb {
-    margin: -201px 15px 0px 0px;
-    text-align: right;
+   margin: -159px 100px 0px -235px;
+   text-align: right;
+   width: 100%;
 }
 
 .mission-fthumb {
-    margin: -83px 15px 0px 0px;
-    text-align: right;
+   margin: -83px 15px 0px -268px;
+   text-align: right;
+   width: 100%;
 }
 
 .ffd {
@@ -403,15 +419,16 @@ code {
 
 .mleft-column {
     color: #777;
-    width: 5%;
+    width: 20%;
     height: 92%;
     float: left;
-    margin-top: 12px;
+    margin-top: -30px;
 }
 .mright-column {
-    width: 95%;
+    width: 80%;
     float: right;
     padding-top: 1em;
+    margin-top: -40px;
 }
 
 .fp-focus h3 {
@@ -482,28 +499,26 @@ code {
     background-size: cover;
 }
 .vs-slide-1 {
-    background-image: url("../img/vs.png");
+    background-image: url("../img/vs.jpg");
     background-size: cover;
 }
 .vs-slide-2 {
-    background-image: url("../img/vs-container.png");
+    background-image: url("../img/vs-container.jpg");
     background-size: cover;
 }
 
 .mission {
     background-color: #e0e0e0;
     background-image: url("../img/mission.png");
-    background-size: 908px;
+    background-size: 1210px;
     background-repeat: no-repeat;
-    background-position: right 71px;
 }
 
 .hubble {
     background-color: #e0e0e0;
     background-image: url("../img/hubble-config.jpg");
-    background-size: 908px;
+    background-size: 1210px;
     background-repeat: no-repeat;
-    background-position: right 71px;
 }
 
 .tl {
@@ -519,6 +534,14 @@ code {
 
 .tlh {
     color: white;
+}
+
+.fp-focus-dt {
+   font-family: 'Yanone Kaffeesatz';
+   font-size: 1.6em;
+   margin: 0px 0px 0px 47px;
+   text-align: left;
+   width: 100%;
 }
 
 .msp {
@@ -991,5 +1014,5 @@ code {
 }
 .vs-common {
     color: white;
-    margin: 0px 0px 0px 245px;
+    margin: 0px 0px 0px 386px;
 }
