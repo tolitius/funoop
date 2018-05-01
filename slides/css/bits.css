@@ -97,7 +97,7 @@ code {
 }
 
 .sub-left {
-   margin: 45px 0px 0px -98px;
+   margin: 45px 0px 0px -85px;
    font-size: 0.9em;
    padding: 29px;
    border: 1px solid #f5f5f533;
@@ -183,6 +183,11 @@ code {
     margin-left: 141px;
 }
 
+.fp-focus-t h3 {
+   margin: 0px 0px 0px 229px;
+   font-size: 0.8em;
+}
+
 .solid-w {
    width: 111%;
 }
@@ -203,10 +208,22 @@ code {
     color: #0ac805;
 }
 
+.fp-way-l {
+    color: #383131;
+    margin: -56px 0px -35px 0px;
+}
+
+.fp-way-l p {
+    font-style: normal;
+}
+
+.fp-way-l li {
+    margin-left: -28px;
+}
+
 .jsf-ms {
     margin-left: 26px;
     width: 101%;
-}
 }
 
 .gr {
@@ -334,9 +351,17 @@ code {
    width: 100%;
 }
 
+.fp-hl {
+   margin-top: 23px;
+}
+
 .ffd {
-    font-weight: bold;
-    color: black;
+   font-weight: bold;
+   color: #0c0101cc;
+   font-family: 'Yanone Kaffeesatz';
+   margin: 0px;
+   text-align: left;
+   font-size: 1.4em;
 }
 
 .mtop-minus-46 {
@@ -415,6 +440,10 @@ code {
     padding: 10px;
     border-radius: 10px;
     background: gray;
+}
+
+.olc {
+   margin-left: 47px;
 }
 
 .mleft-column {
