@@ -581,6 +581,7 @@ code {
     font-family: 'Droid Serif';
     font-size: 0.9em;
     color: #ffffffb3;
+    margin-left: 159px;
 }
 
 .otl {
@@ -612,7 +613,7 @@ code {
 }
 
 .csp {
-    margin: 37px 0px -357px 0px;
+    margin: 49px 0px -357px 151px;
     font-family: 'Yanone Kaffeesatz';
     font-size: 1.7em;
     text-align: left;
@@ -661,9 +662,9 @@ code {
 }
 
 .litmus {
-    width: 60%;
+    width: 50%;
     float: right;
-    margin: -85px 0px -175px 0px;
+    margin: -85px 97px -175px 0px;
 }
 
 .litmus h4 {
@@ -687,6 +688,7 @@ code {
 .wt-text {
     font-family: 'Ubuntu Mono';
     font-size: 1.2em;
+    line-height: 20px;
 }
 
 .mcode {
@@ -727,12 +729,17 @@ code {
 }
 
 .es1 {
-    margin-bottom: -300px
+    margin: 0px 0px -300px 150px;
+    width: 66%;
 }
 
 .es1 .remark-code {
     background: #8080804d;
     border-radius: 16px;
+}
+
+.cross-list {
+   margin-left: 97px;
 }
 
 .es2 {
@@ -745,7 +752,8 @@ code {
 }
 
 .es2 .cblock {
-    margin-left: 22px;
+   margin: 26px 0px 0px 157px;
+   width: 69%;
 }
 
 .es2 h1 {
@@ -763,13 +771,13 @@ code {
 }
 
 .es3 .cblock {
-    margin-left: 164px;
-    width: 55%;
+   margin-left: 320px;
+   width: 38%;
 }
 
 .es4 .cblock {
-    margin-left: 29px;
-    width: 93%;
+   margin-left: 168px;
+   width: 67%;
 }
 
 .es5 {
@@ -782,18 +790,18 @@ code {
 }
 
 .es5 .cblock {
-    margin-left: -13px;
-    width: 104%;
+   margin-left: 141px;
+   width: 74%;
 }
 
 .es6 {
-    width: 68%;
-    margin-left: 119px;
+   width: 100%;
+   margin-left: 0px;
 }
 
 .es7 {
-    width: 42%;
-    margin-left: 222px;
+   width: 100%;
+   margin-left: 0px;
 }
 
 .es8 {
@@ -810,11 +818,15 @@ code {
    font-family: 'Yanone Kaffeesatz';
    color: white;
    font-size: 1.9em;
-   margin: 38px 0px 0px 141px;
+   margin: 38px 0px 0px 292px;
 }
 
 .nsql-t a {
    margin-left: 40px;
+}
+
+.ev-l {
+   margin-left: 79px;
 }
 
 .portb {
@@ -878,7 +890,7 @@ code {
    font-family: 'Yanone Kaffeesatz';
    color: white;
    font-size: 1.9em;
-   margin: 27px 0px 0px 141px;
+   margin: 27px 0px 0px 285px;
 }
 
 .mh-t a {
@@ -906,9 +918,9 @@ code {
 }
 
 .aws2 .remark-code {
-    text-align: left;
-    margin: 55px 0px 0px -19px;
-    width: 102.5%;
+   text-align: left;
+   margin: 55px 0px 0px 132px;
+   width: 73.5%;
 }
 
 .kafka1 {
@@ -969,14 +981,14 @@ code {
 
 .trava {
    font-size: 1.2em;
-   margin: 0px 0px -28px 536px;
+   margin: 0px 0px -28px 577px;
    padding: 0px;
    font-family: 'Yanone Kaffeesatz';
 }
 
 .protol {
    font-size: 1.2em;
-   margin: 0px 0px -28px 545px;
+   margin: 0px 0px -28px 649px;
    padding: 0px;
    font-family: 'Yanone Kaffeesatz';
    width: 31%;
@@ -1032,7 +1044,7 @@ code {
    font-family: 'Yanone Kaffeesatz';
    color: white;
    font-size: 1.9em;
-   margin: -39px 0px 0px 81px;
+   margin: -39px 0px 0px 220px;
 }
 
 .ph-t a {
