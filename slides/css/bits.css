@@ -6,6 +6,18 @@ h1, h2, h3 {
     font-weight: 400;
     margin-bottom: 0;
 }
+
+/* .remark-slide-scaler { */
+/*    background-color: #272822; */
+/* } */
+
+/* .remark-slide { */
+/*    width: 908px; */
+/*    height: 681px; */
+/*    margin-left: 154.333px; */
+/*    top: 0px; */
+/* } */
+
 .remark-slide-content h1 { font-size: 3em; }
 .remark-slide-content h2 { font-size: 2em; }
 .remark-slide-content h3 { font-size: 1.6em; }
@@ -72,8 +84,12 @@ code {
     text-align: left;
     color: #777872;
     line-height: 10px;
-    margin-left: 35px;
+    margin-left: 94px;
     font-size: 1.1em;
+}
+
+.lleft h3 {
+    font-size: 1.7em;
 }
 
 .lhl {
@@ -81,18 +97,20 @@ code {
 }
 
 .sub-left {
-   margin: 45px 0px 0px -59px;
+   margin: 45px 0px 0px -85px;
    font-size: 0.9em;
-   padding: 20px;
+   padding: 29px;
    border: 1px solid #f5f5f533;
    border-radius: 10px;
-   width: 73%;
+   width: 69%;
    background-color: #5d565966;
    color: #83847d;
+   text-align: center;
 }
 
 .sub-left h3 {
     margin-top: 0px;
+    font-size: 2.0em;
 }
 
 .rcc {
@@ -119,13 +137,13 @@ code {
 }
 
 .curiosity {
-    width: 114%;
+    width: 87%;
     border-radius: 25px;
     overflow: hidden;
 }
 
 .dsn {
-    width: 92.7%;
+    width: 73.2%;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -139,9 +157,16 @@ code {
 }
 
 .jleft {
-    font-family: "Ubuntu Mono";
-    font-size: 1.07em;
-    margin-left: 10px;
+   font-family: "Ubuntu Mono";
+   font-size: 1.2em;
+   margin-left: 154px;
+   width: 100%;
+   font-style: oblique;
+}
+
+.jcenter {
+    text-align: center;
+    margin-left: 81px;
     width: 100%;
 }
 
@@ -158,6 +183,11 @@ code {
     margin-left: 141px;
 }
 
+.fp-focus-t h3 {
+   margin: 0px 0px 0px 229px;
+   font-size: 0.8em;
+}
+
 .solid-w {
    width: 111%;
 }
@@ -165,23 +195,35 @@ code {
 .oop-solid p {
     background-color: #272822;
     padding: 11px;
-    margin: 40px 0px -84px -205px;
+    margin: 40px 0px -84px -185px;
     color: #ddd;
     border-radius: 10px;
     font-size: 1.8em;
     font-family: 'Ubuntu Mono';
     text-align: center;
-    width: 123%;
+    width: 100%;
 }
 
 .oop-solid .check {
     color: #0ac805;
 }
 
-.jsf-ms {
-    margin-left: 26px;
-    width: 101%;
+.fp-way-l {
+    color: #383131;
+    margin: -56px 0px -35px 0px;
 }
+
+.fp-way-l p {
+    font-style: normal;
+}
+
+.fp-way-l li {
+    margin-left: -28px;
+}
+
+.jsf-ms {
+    margin-left: 19px;
+    width: 104%;
 }
 
 .gr {
@@ -239,10 +281,14 @@ code {
     margin-left: -40px;
 }
 
+.same-needs h3 {
+   margin-left: 58px;
+}
+
 .shell {
     background-color: black;
     padding: 0px;
-    margin: 40px 0px 0px 60px;
+    margin: 40px 0px 0px 84px;
     color: #ddd;
     border-radius: 10px;
     font-size: 1.6em;
@@ -253,23 +299,24 @@ code {
 
 .shell p {
     padding: 10px;
+    font-size: 1.5em;
 }
 
-.time-graph h2 {
+.time-graph h1 {
     margin: 0px;
     padding: 0px;
 }
 
 .immutability {
-    margin: 0px 0px 0px 201px;
-    font-size: 1.2em;
-    padding: 30px;
-    border: 1px solid #f9267299;
-    border-radius: 10px;
-    width: 37%;
-    text-align: left;
-    background-color: #f926724d;
-    color: #ffffff80;
+   margin: 0px 0px 0px 284px;
+   font-size: 1.8em;
+   padding: 30px;
+   border: 1px solid #f9267299;
+   border-radius: 10px;
+   width: 40%;
+   text-align: left;
+   background-color: #f926724d;
+   color: #ffffff80;
 }
 
 .demo code {
@@ -297,18 +344,28 @@ code {
 }
 
 .mission-thumb {
-    margin: -201px 15px 0px 0px;
-    text-align: right;
+   margin: -159px 100px 0px -235px;
+   text-align: right;
+   width: 100%;
 }
 
 .mission-fthumb {
-    margin: -83px 15px 0px 0px;
-    text-align: right;
+   margin: -83px 15px 0px -268px;
+   text-align: right;
+   width: 100%;
+}
+
+.fp-hl {
+   margin-top: 23px;
 }
 
 .ffd {
-    font-weight: bold;
-    color: black;
+   font-weight: bold;
+   color: #0c0101cc;
+   font-family: 'Yanone Kaffeesatz';
+   margin: 0px;
+   text-align: left;
+   font-size: 1.4em;
 }
 
 .mtop-minus-46 {
@@ -324,14 +381,14 @@ code {
 }
 
 .cfal {
-    margin-left: 99px;
+    margin-left: 262px;
     text-align: left;
     width: 600px;
 }
 
 .crepl {
     width: 106%;
-    margin-left: -38px;
+    margin-left: -35px;
 }
 
 .crepl .remark-code {
@@ -364,13 +421,13 @@ code {
 }
 
 .why-libs {
-    margin: 32px 0px -74px 67px;
-    font-size: 0.9em;
-    padding: 0px 15px 29px 17px;
-    border: 1px solid #f5f5f533;
-    border-radius: 10px;
-    width: 76%;
-    background-color: #5d565966;
+   margin: 32px 0px -75px 152px;
+   font-size: 1.1em;
+   padding: 0px 15px 29px 17px;
+   border: 1px solid #f5f5f533;
+   border-radius: 10px;
+   width: 68%;
+   background-color: #5d565966;
 }
 
 .why-libs h2 {
@@ -378,9 +435,11 @@ code {
 }
 
 .what-about {
-    text-align: left;
-    margin-left: 200px;
-    line-height: 12px;
+   text-align: left;
+   margin-left: 401px;
+   line-height: 12px;
+   font-size: 1.2em;
+   color: #0009;
 }
 
 .needs-to-live {
@@ -389,17 +448,42 @@ code {
     background: gray;
 }
 
+.olc {
+   margin-left: 47px;
+}
+
+
+.sleft-column {
+   color: #777;
+   width: 21%;
+   height: 92%;
+   float: left;
+   margin-left: 52px;
+}
+
+.sdesign {
+   width: 81%;
+   margin: 0px 0px 0px 68px;
+}
+
+.sright-column {
+   width: 73%;
+   float: right;
+   padding-top: 1em;
+}
+
 .mleft-column {
     color: #777;
-    width: 5%;
+    width: 20%;
     height: 92%;
     float: left;
-    margin-top: 12px;
+    margin-top: -30px;
 }
 .mright-column {
-    width: 95%;
+    width: 80%;
     float: right;
     padding-top: 1em;
+    margin-top: -40px;
 }
 
 .fp-focus h3 {
@@ -412,7 +496,7 @@ code {
 
 .lvf {
     text-align: left;
-    margin-left: 309px;
+    margin-left: 461px;
 }
 
 /* Slide-specific styling */
@@ -470,28 +554,26 @@ code {
     background-size: cover;
 }
 .vs-slide-1 {
-    background-image: url("../img/vs.png");
+    background-image: url("../img/vs.jpg");
     background-size: cover;
 }
 .vs-slide-2 {
-    background-image: url("../img/vs-container.png");
+    background-image: url("../img/vs-container.jpg");
     background-size: cover;
 }
 
 .mission {
     background-color: #e0e0e0;
     background-image: url("../img/mission.png");
-    background-size: 908px;
+    background-size: 1210px;
     background-repeat: no-repeat;
-    background-position: right 71px;
 }
 
 .hubble {
     background-color: #e0e0e0;
     background-image: url("../img/hubble-config.jpg");
-    background-size: 908px;
+    background-size: 1210px;
     background-repeat: no-repeat;
-    background-position: right 71px;
 }
 
 .tl {
@@ -499,6 +581,7 @@ code {
     font-family: 'Droid Serif';
     font-size: 0.9em;
     color: #ffffffb3;
+    margin-left: 159px;
 }
 
 .otl {
@@ -507,6 +590,14 @@ code {
 
 .tlh {
     color: white;
+}
+
+.fp-focus-dt {
+   font-family: 'Yanone Kaffeesatz';
+   font-size: 1.6em;
+   margin: 0px 0px 0px 47px;
+   text-align: left;
+   width: 100%;
 }
 
 .msp {
@@ -522,7 +613,7 @@ code {
 }
 
 .csp {
-    margin: 37px 0px -357px 0px;
+    margin: 49px 0px -357px 151px;
     font-family: 'Yanone Kaffeesatz';
     font-size: 1.7em;
     text-align: left;
@@ -571,9 +662,9 @@ code {
 }
 
 .litmus {
-    width: 60%;
+    width: 50%;
     float: right;
-    margin: -85px 0px -175px 0px;
+    margin: -85px 97px -175px 0px;
 }
 
 .litmus h4 {
@@ -597,6 +688,7 @@ code {
 .wt-text {
     font-family: 'Ubuntu Mono';
     font-size: 1.2em;
+    line-height: 20px;
 }
 
 .mcode {
@@ -637,12 +729,17 @@ code {
 }
 
 .es1 {
-    margin-bottom: -300px
+    margin: 0px 0px -300px 150px;
+    width: 66%;
 }
 
 .es1 .remark-code {
     background: #8080804d;
     border-radius: 16px;
+}
+
+.cross-list {
+   margin-left: 97px;
 }
 
 .es2 {
@@ -655,7 +752,8 @@ code {
 }
 
 .es2 .cblock {
-    margin-left: 22px;
+   margin: 26px 0px 0px 157px;
+   width: 69%;
 }
 
 .es2 h1 {
@@ -673,13 +771,13 @@ code {
 }
 
 .es3 .cblock {
-    margin-left: 164px;
-    width: 55%;
+   margin-left: 320px;
+   width: 38%;
 }
 
 .es4 .cblock {
-    margin-left: 29px;
-    width: 93%;
+   margin-left: 168px;
+   width: 67%;
 }
 
 .es5 {
@@ -692,18 +790,18 @@ code {
 }
 
 .es5 .cblock {
-    margin-left: -13px;
-    width: 104%;
+   margin-left: 141px;
+   width: 74%;
 }
 
 .es6 {
-    width: 68%;
-    margin-left: 119px;
+   width: 100%;
+   margin-left: 0px;
 }
 
 .es7 {
-    width: 42%;
-    margin-left: 222px;
+   width: 100%;
+   margin-left: 0px;
 }
 
 .es8 {
@@ -720,11 +818,15 @@ code {
    font-family: 'Yanone Kaffeesatz';
    color: white;
    font-size: 1.9em;
-   margin: 38px 0px 0px 141px;
+   margin: 38px 0px 0px 292px;
 }
 
 .nsql-t a {
    margin-left: 40px;
+}
+
+.ev-l {
+   margin-left: 79px;
 }
 
 .portb {
@@ -788,7 +890,7 @@ code {
    font-family: 'Yanone Kaffeesatz';
    color: white;
    font-size: 1.9em;
-   margin: 27px 0px 0px 141px;
+   margin: 27px 0px 0px 285px;
 }
 
 .mh-t a {
@@ -816,9 +918,9 @@ code {
 }
 
 .aws2 .remark-code {
-    text-align: left;
-    margin: 55px 0px 0px -19px;
-    width: 102.5%;
+   text-align: left;
+   margin: 55px 0px 0px 132px;
+   width: 73.5%;
 }
 
 .kafka1 {
@@ -879,14 +981,14 @@ code {
 
 .trava {
    font-size: 1.2em;
-   margin: 0px 0px -28px 536px;
+   margin: 0px 0px -28px 577px;
    padding: 0px;
    font-family: 'Yanone Kaffeesatz';
 }
 
 .protol {
    font-size: 1.2em;
-   margin: 0px 0px -28px 545px;
+   margin: 0px 0px -28px 649px;
    padding: 0px;
    font-family: 'Yanone Kaffeesatz';
    width: 31%;
@@ -942,7 +1044,7 @@ code {
    font-family: 'Yanone Kaffeesatz';
    color: white;
    font-size: 1.9em;
-   margin: -39px 0px 0px 81px;
+   margin: -39px 0px 0px 220px;
 }
 
 .ph-t a {
@@ -979,5 +1081,5 @@ code {
 }
 .vs-common {
     color: white;
-    margin: 0px 0px 0px 245px;
+    margin: 0px 0px 0px 386px;
 }

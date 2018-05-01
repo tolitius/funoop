@@ -16,7 +16,7 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-class: first-slide
+class: first-slide, cslide
 #Clojure Bits on JVM
 ###by [@tolitius](https://twitter.com/tolitius)
 ---
@@ -166,7 +166,7 @@ class: inverse, middle, jpl
 * turn .jhl[28 degrees] to the .jhl[left]
 * travel .jhl[forward 34] more meters
 ]]
-.center[
+.jcenter[
 ### [D]()eep [S]()pace [N]()etwork
 <img class="dsn" src="img/deep-space-network.png">
 ]]]
@@ -176,13 +176,14 @@ class: middle, center, mission
 layout: false
 class: middle
 .mission-thumb[
-<img src="img/mission-thumb.png" width="62%"/>
+<img src="img/mission-thumb.png" width="49%"/>
 ]
 .left-column[
+.olc[
 .mtop-minus-46[
   ## [OOP]() design
   ### .oop-focus[.rcc[focus on .rcch[nouns]]]
-]]
+]]]
 .right-column[
 .mtop-minus-46[
 .bq[
@@ -201,13 +202,14 @@ class: middle
 layout: false
 class: middle
 .mission-thumb[
-<img src="img/mission-thumb.png" width="62%"/>
+<img src="img/mission-thumb.png" width="49%"/>
 ]
 .left-column[
+.olc[
 .mtop-minus-46[
   ## [OOP]() design
   ### .oop-focus[.rcc[focus on .rcch[nouns]]]
-]]
+]]]
 .right-column[
 .mtop-minus-46[
 .bq[
@@ -224,24 +226,25 @@ class: middle
 ]]]
 .solid-w[
 .oop-solid[
-design approach............                           [S.O.L.I.D. .check[✔]]
+design approach............ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [S.O.L.I.D. .check[✔]]
 ]]]
 ---
 layout: false
-class: middle, center
-.mission-fthumb[
-<img src="img/mission-thumb.png" width="62%"/>
+class: middle
+.mission-thumb[
+<img src="img/mission-thumb.png" width="49%"/>
 ]
-
-.fp-focus[
-### .oop-focus[.rcc[focus on .rcch[data] and its .rcch[transformation]]]
-]
-.mleft-column[
-  ## [FP]()
-]
-.mright-column[
+.left-column[
+.olc[
+.mtop-minus-46[
+## [FP]() design
+### .oop-focus[.rcc[focus on .rcch[data]]]
+.fp-focus-t[
+###.rcc[and its .rcch[transformation]]]
+]]]
+.right-column[
 .bq[
-.oop-way[
+.fp-way-l[
 * navigation commands are sent to the Deep Space Network
 
 * navigation commands are split and sent in sequence to navigator
@@ -256,20 +259,22 @@ class: middle, center
 ]]]
 ---
 layout: false
-class: middle, center
-.mission-fthumb[
-<img src="img/mission-thumb.png" width="62%"/>
-]
-
-.fp-focus[
-### .oop-focus[.rcc[focus on .rcch[data] and its .rcch[transformation]]]
-]
-.mleft-column[
-  ## [FP]()
-]
-.mright-column[
+class: middle, fp-hl
+.fp-hl[
+.mission-thumb[
+<img src="img/mission-thumb.png" width="49%"/>
+]]
+.left-column[
+.olc[
+.mtop-minus-46[
+## [FP]() design
+### .oop-focus[.rcc[focus on .rcch[data]]]
+.fp-focus-t[
+###.rcc[and its .rcch[transformation]]]
+]]]
+.right-column[
 .bq[
-.oop-way[
+.fp-way-l[
 .fgr[
 * .ffd[navigation commands] are .ffd[sent] to the Deep Space Network
 
@@ -285,39 +290,39 @@ class: middle, center
 ]]]]
 ---
 class: inverse, middle, center, ccol
-## commands [&gt;]() send [&gt;]() navigate [&gt;]() capture [&gt;]() send back
+# commands [&gt;]() send [&gt;]() navigate [&gt;]() capture [&gt;]() send back
 ---
 class: inverse, middle, center, ccol
-## commands [|]() send [|]() navigate [|]() capture [|]() send back
+# commands [|]() send [|]() navigate [|]() capture [|]() send back
 
 ---
 class: inverse, middle, center, ccol
-## commands [|]() send [|]() navigate [|]() capture [|]() send back
+# commands [|]() send [|]() navigate [|]() capture [|]() send back
 
 .shell[
 $ .lhl[cut] -f 2 data | .lhl[sort] -o | .lhl[uniq] -c
 ]
 ---
 class: inverse, middle, center, ccol
-## commands [|]() send [|]() navigate [|]() capture [|]() send back
+# commands [|]() send [|]() navigate [|]() capture [|]() send back
 
 .shell[
 $ .lhl[cut] -f 2 data | .lhl[sort] -o | .lhl[uniq] -c
 ]
 
-## v1 [&gt;]() v2 [&gt;]() v3 [&gt;]() v4 [&gt;]() ... [&gt;]() v42
+# v1 [&gt;]() v2 [&gt;]() v3 [&gt;]() v4 [&gt;]() ... [&gt;]() v42
 ---
 class: inverse, middle, center, ccol
-## commands [|]() send [|]() navigate [|]() capture [|]() send back
+# commands [|]() send [|]() navigate [|]() capture [|]() send back
 
 .shell[
 $ .lhl[cut] -f 2 data | .lhl[sort] -o | .lhl[uniq] -c
 ]
 
-## v1 [&gt;]() v2 [&gt;]() v3 [&gt;]() v4 [&gt;]() ... [&gt;]() v42
+# v1 [&gt;]() v2 [&gt;]() v3 [&gt;]() v4 [&gt;]() ... [&gt;]() v42
 .time-graph[
-## --------------------------------&gt;
-## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time
+# --------------------------------&gt;
+# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time
 ]
 ---
 class: inverse, middle, center, impic
@@ -357,7 +362,7 @@ class: inverse, middle, center
 ---
 class: middle, center
 .ctm[
-<img src="img/clojure-logo.png" width="20%">
+<img src="img/clojure-logo.png" width="11%">
 ]
 # [state]() management
 ---
@@ -373,21 +378,23 @@ class: inverse, middle, center
 ---
 layout: false
 class: middle
-.left-column[
+.sleft-column[
 .mtop-minus-130[
   ## spring [framework]()
 ]]
-.right-column[
+.sright-column[
 .mtop-minus-130[
 .bq[<span>IoC is also known as dependency injection</span>
 <span>(DI), it's a process whereby .bqh[objects define] their .bqh[dependencies], that is, the other objects they work with</span>
 <p>the .bqh[container] then .bqh[injects] those .bqh[dependencies] when it creates the bean.</p>]
 
 .rcc[
+.sdesign[
 ## design is based on .rcch[stateful components talking] to each other]
+]
 .oop-solid[
 .jsf-ms[
-Java + Spring......... [makes sense .check[✔]]
+Java + Spring......... &nbsp;&nbsp;&nbsp;&nbsp; [makes sense .check[✔]]
 ]]]]
 ---
 class: inverse, middle, center
@@ -693,12 +700,13 @@ class: inverse, middle, center, clojure-dark
 # [cross]() cutting concerns
 .lleft[
 .same-needs[
+.cross-list[
 ### - logging
 ### - exception handling
 ### - transaction management
 ### - security
 ### - profiling
-### - etc.]]]
+### - etc.]]]]
 ---
 class: inverse, middle, center, clojure-dark
 
@@ -717,7 +725,7 @@ class: inverse, middle, center, clojure-dark
 .aop-examples[
 # [two]()fold
 .same-needs[
-### function composition
+## function composition
 
 .es3[
 .cblock[
@@ -738,7 +746,7 @@ class: inverse, middle, center, clojure-dark
 .aop-examples[
 # [two]()fold
 .same-needs[
-### rebind functions at runtime
+## rebind functions at runtime
 .es3[
 .es4[
 .cblock[
@@ -1043,11 +1051,12 @@ class: inverse, middle, center, clojure-dark
 # sending / receiving [events]()
 .lleft[
 .same-needs[
+.ev-l[
 ### - message brokers
 ### - zeromq
 ### - message passing
 ### - etc.
-]]]]
+]]]]]
 
 ---
 class: inverse, middle, center, clojure-dark
@@ -1570,7 +1579,7 @@ class: first-slide, center, middle, inverse
           highlightStyle: 'monokai',
           highlightLanguage: 'remark',
           highlightLines: true,
-          ratio: '4:3'
+          ratio: '16:9'
         }) ;
     </script>
   </body>
