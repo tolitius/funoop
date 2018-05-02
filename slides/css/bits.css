@@ -814,6 +814,14 @@ code {
     margin-left: 144px;
 }
 
+.es42 {
+   margin-left: 42px;
+}
+
+.es42 .remark-code {
+   font-size: 1.32em;
+}
+
 .nsql-t {
    font-family: 'Yanone Kaffeesatz';
    color: white;

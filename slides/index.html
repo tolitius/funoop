@@ -289,6 +289,35 @@ class: middle, fp-hl
 * .ffd[image events] are .ffd[stored] at JPL
 ]]]]
 ---
+class: inverse, middle, center
+
+.es42[
+.cblock[
+```clojure
+;; navigation commands are sent to the Deep Space Network
+(defn publish-events [dsn events] ...)
+
+;; navigation commands are received by the rover
+(defn consume-events [dsn process] ...)
+
+;; navigation commands are passed to the command center
+(defn parse-commands [events] ... )
+
+;; navigation commands are split and sent in sequence to navigator
+(defn navigate [directions] ...)
+
+;; (once rover arrives to the destination)
+;; capture commands are sent to cameras
+(defn capture [cameras] ...)
+
+;; image events are sent back to the rover
+(defn save [store events] ...)
+
+;; image events are received and stored by JPL
+(defn store-images [path events] ... )
+```
+]]
+---
 class: inverse, middle, center, ccol
 # commands [&gt;]() send [&gt;]() navigate [&gt;]() capture [&gt;]() send back
 ---

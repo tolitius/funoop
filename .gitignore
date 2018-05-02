@@ -6,8 +6,8 @@ pom.xml.asc
 *.jar
 *.class
 /.lein-*
-*nrepl-port
 *nrepl-history
+*nrepl-port
 /resources/public/js
 figwheel_server.log
 /out
