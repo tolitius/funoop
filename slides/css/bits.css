@@ -18,6 +18,10 @@ h1, h2, h3 {
 /*    top: 0px; */
 /* } */
 
+.remark-container {
+    background: #272822;
+}
+
 .remark-slide-content h1 { font-size: 3em; }
 .remark-slide-content h2 { font-size: 2em; }
 .remark-slide-content h3 { font-size: 1.6em; }
