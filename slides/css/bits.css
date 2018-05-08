@@ -557,6 +557,10 @@ code {
     background-image: url("../img/first-slide-background.png");
     background-size: cover;
 }
+.about-slide {
+    background-image: url("../img/about-slide-background.png");
+    background-size: cover;
+}
 .vs-slide-1 {
     background-image: url("../img/vs.jpg");
     background-size: cover;
