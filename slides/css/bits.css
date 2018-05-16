@@ -147,7 +147,7 @@ code {
 }
 
 .dsn {
-    width: 73.2%;
+    width: 64.3%;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -162,15 +162,15 @@ code {
 
 .jleft {
    font-family: "Ubuntu Mono";
-   font-size: 1.2em;
-   margin-left: 154px;
+   font-size: 1.4em;
+   margin-left: 79px;
    width: 100%;
    font-style: oblique;
 }
 
 .jcenter {
     text-align: center;
-    margin-left: 81px;
+    margin-left: 50px;
     width: 100%;
 }
 
