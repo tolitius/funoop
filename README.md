@@ -4,6 +4,8 @@
 
 > _slides (made for Firefox): [gitpod.com/talks/jeeconf.2018](http://gitpod.com/talks/jeeconf.2018)_
 
+> _talk: [youtube](https://www.youtube.com/watch?v=Svhhga9Rxnc)_
+
 Out of many strong JVM based languages Clojure and Java make a great couple.
 
 Coming to Clojure from Spring/Java several years ago I really wished back then someone could explain functional programming and Clojure ecosystem to me from the Spring/Java point of view.
